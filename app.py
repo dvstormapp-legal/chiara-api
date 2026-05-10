@@ -4,13 +4,14 @@ import json
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def home():
     return "Chiara API attiva"
 
+
 @app.route("/chiara")
 def chiara():
-
     nome_cercato = request.args.get("localita", "Cagliari")
 
     # --- LETTURA FILE LOCALITÀ ---
@@ -28,7 +29,7 @@ def chiara():
             break
 
     if localita_trovata is None:
-        return jsonify({"errore": "Località non trovata"})
+        return jsonify({"errore": "Località non trovata"}), 404
 
     nome_localita = localita_trovata["nome"]
     lat = localita_trovata["lat"]
@@ -40,10 +41,19 @@ def chiara():
         f"?latitude={lat}"
         f"&longitude={lon}"
         "&current=temperature_2m,wind_speed_10m,wind_gusts_10m,wind_direction_10m,precipitation,cloud_cover"
+        "&timezone=auto"
     )
 
-    risposta = requests.get(url)
+    risposta = requests.get(url, timeout=10)
     dati = risposta.json()
+
+    if "current" not in dati:
+        return jsonify({
+            "errore": "Dati meteo non disponibili",
+            "debug": dati,
+            "url_usato": url
+        }), 502
+
     meteo = dati["current"]
 
     # --- DATI BASE ---
@@ -110,6 +120,15 @@ def chiara():
         "temperatura": meteo["temperature_2m"],
         "vento": vento,
         "raffiche": raffiche,
+        "direzione_vento": {
+            "gradi": direzione_vento,
+            "nome": nome_vento,
+            "locale": vento_locale
+        },
+        "precipitazioni": pioggia,
+        "copertura_nuvolosa": nuvole,
+        "valutazione_vento": valutazione_vento,
+        "valutazione_meteo": valutazione_meteo,
         "descrizione": risposta_chiara
     })
 
