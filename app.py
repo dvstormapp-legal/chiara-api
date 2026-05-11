@@ -1,8 +1,12 @@
 from flask import Flask, request, jsonify
 import requests
 import json
+import time
 
 app = Flask(__name__)
+
+CACHE = {}
+CACHE_DURATA_SECONDI = 1800  # 30 minuti
 
 
 @app.route("/")
@@ -14,7 +18,17 @@ def home():
 def chiara():
     nome_cercato = request.args.get("localita", "Cagliari")
 
-    # --- LETTURA FILE LOCALITÀ ---
+    chiave_cache = nome_cercato.strip().lower()
+    adesso = time.time()
+
+    if chiave_cache in CACHE:
+        dati_cache = CACHE[chiave_cache]
+
+        if adesso - dati_cache["timestamp"] < CACHE_DURATA_SECONDI:
+            risposta_cache = dati_cache["risposta"].copy()
+            risposta_cache["cache"] = "usata"
+            return jsonify(risposta_cache)
+
     with open("localita_sardegna.json", "r", encoding="utf-8") as file:
         localita_sardegna = json.load(file)
 
@@ -35,7 +49,6 @@ def chiara():
     lat = localita_trovata["lat"]
     lon = localita_trovata["lng"]
 
-    # --- API METEO ---
     url = (
         "https://api.open-meteo.com/v1/forecast"
         f"?latitude={lat}"
@@ -56,14 +69,12 @@ def chiara():
 
     meteo = dati["current"]
 
-    # --- DATI BASE ---
     vento = meteo["wind_speed_10m"]
     raffiche = meteo["wind_gusts_10m"]
     direzione_vento = meteo["wind_direction_10m"]
     pioggia = meteo["precipitation"]
     nuvole = meteo["cloud_cover"]
 
-    # --- DIREZIONE VENTO ---
     if direzione_vento >= 337.5 or direzione_vento < 22.5:
         nome_vento = "Tramontana"
     elif direzione_vento < 67.5:
@@ -89,7 +100,6 @@ def chiara():
     if nome_vento == "Maestrale":
         vento_locale = "Maestrale (tipico della Sardegna)"
 
-    # --- VALUTAZIONI ---
     if raffiche >= 60:
         valutazione_vento = "Vento molto forte"
     elif raffiche >= 40:
@@ -104,14 +114,13 @@ def chiara():
     else:
         valutazione_meteo = "Cielo variabile o sereno"
 
-    # --- RISPOSTA CHIARA ---
     risposta_chiara = (
         f"A {nome_localita} ci sono {meteo['temperature_2m']}°C. "
         f"Soffia {vento_locale.lower()} con raffiche fino a {raffiche} km/h. "
         f"{valutazione_meteo}."
     )
 
-    return jsonify({
+    risposta_finale = {
         "localita": nome_localita,
         "coordinate": {
             "lat": lat,
@@ -129,8 +138,16 @@ def chiara():
         "copertura_nuvolosa": nuvole,
         "valutazione_vento": valutazione_vento,
         "valutazione_meteo": valutazione_meteo,
-        "descrizione": risposta_chiara
-    })
+        "descrizione": risposta_chiara,
+        "cache": "aggiornata"
+    }
+
+    CACHE[chiave_cache] = {
+        "timestamp": adesso,
+        "risposta": risposta_finale
+    }
+
+    return jsonify(risposta_finale)
 
 
 if __name__ == "__main__":
