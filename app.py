@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import requests
 import json
 import time
+import os
 
 app = Flask(__name__)
 
@@ -23,11 +24,17 @@ def chiara():
 
     if chiave_cache in CACHE:
         dati_cache = CACHE[chiave_cache]
-
         if adesso - dati_cache["timestamp"] < CACHE_DURATA_SECONDI:
             risposta_cache = dati_cache["risposta"].copy()
             risposta_cache["cache"] = "usata"
             return jsonify(risposta_cache)
+
+    api_key = os.getenv("WEATHER_API_KEY")
+
+    if not api_key:
+        return jsonify({
+            "errore": "WEATHER_API_KEY non configurata su Render"
+        }), 500
 
     with open("localita_sardegna.json", "r", encoding="utf-8") as file:
         localita_sardegna = json.load(file)
@@ -50,11 +57,10 @@ def chiara():
     lon = localita_trovata["lng"]
 
     url = (
-        "https://api.open-meteo.com/v1/forecast"
-        f"?latitude={lat}"
-        f"&longitude={lon}"
-        "&current=temperature_2m,wind_speed_10m,wind_gusts_10m,wind_direction_10m,precipitation,cloud_cover"
-        "&timezone=auto"
+        "https://api.weatherapi.com/v1/current.json"
+        f"?key={api_key}"
+        f"&q={lat},{lon}"
+        "&lang=it"
     )
 
     risposta = requests.get(url, timeout=10)
@@ -63,17 +69,18 @@ def chiara():
     if "current" not in dati:
         return jsonify({
             "errore": "Dati meteo non disponibili",
-            "debug": dati,
-            "url_usato": url
+            "debug": dati
         }), 502
 
     meteo = dati["current"]
 
-    vento = meteo["wind_speed_10m"]
-    raffiche = meteo["wind_gusts_10m"]
-    direzione_vento = meteo["wind_direction_10m"]
-    pioggia = meteo["precipitation"]
-    nuvole = meteo["cloud_cover"]
+    temperatura = meteo["temp_c"]
+    vento = meteo["wind_kph"]
+    raffiche = meteo.get("gust_kph", vento)
+    direzione_vento = meteo["wind_degree"]
+    pioggia = meteo["precip_mm"]
+    nuvole = meteo["cloud"]
+    condizione = meteo["condition"]["text"]
 
     if direzione_vento >= 337.5 or direzione_vento < 22.5:
         nome_vento = "Tramontana"
@@ -115,9 +122,9 @@ def chiara():
         valutazione_meteo = "Cielo variabile o sereno"
 
     risposta_chiara = (
-        f"A {nome_localita} ci sono {meteo['temperature_2m']}°C. "
+        f"A {nome_localita} ci sono {temperatura}°C. "
         f"Soffia {vento_locale.lower()} con raffiche fino a {raffiche} km/h. "
-        f"{valutazione_meteo}."
+        f"{valutazione_meteo}. Condizione rilevata: {condizione}."
     )
 
     risposta_finale = {
@@ -126,7 +133,7 @@ def chiara():
             "lat": lat,
             "lon": lon
         },
-        "temperatura": meteo["temperature_2m"],
+        "temperatura": temperatura,
         "vento": vento,
         "raffiche": raffiche,
         "direzione_vento": {
@@ -136,10 +143,12 @@ def chiara():
         },
         "precipitazioni": pioggia,
         "copertura_nuvolosa": nuvole,
+        "condizione": condizione,
         "valutazione_vento": valutazione_vento,
         "valutazione_meteo": valutazione_meteo,
         "descrizione": risposta_chiara,
-        "cache": "aggiornata"
+        "cache": "aggiornata",
+        "provider": "WeatherAPI"
     }
 
     CACHE[chiave_cache] = {
