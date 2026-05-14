@@ -63,8 +63,6 @@ def nome_vento_da_gradi(gradi):
 def adatta_vento_sardegna(nome_vento, gradi):
     if nome_vento == "Ponente" and gradi > 280:
         return "Ponente-maestrale"
-    if nome_vento == "Maestrale":
-        return "Maestrale"
     return nome_vento
 
 
@@ -74,59 +72,59 @@ def descrivi_condizione(condizione, pioggia, raffiche):
     if "temporale" in c or "thunder" in c:
         if raffiche >= 50 or pioggia >= 10:
             return random.choice([
-                "Sono possibili temporali, localmente anche intensi",
-                "Sono previsti fenomeni temporaleschi, con possibili fasi intense",
-                "Il tempo potrà risultare instabile, con temporali e fenomeni localmente forti"
+                "sono possibili temporali, localmente anche intensi",
+                "sono previsti fenomeni temporaleschi, con possibili fasi intense",
+                "il tempo potrà risultare instabile, con temporali e fenomeni localmente forti"
             ])
         return random.choice([
-            "Sono possibili temporali",
-            "Potranno verificarsi temporali locali",
-            "Il tempo potrà risultare temporalesco a tratti"
+            "sono possibili temporali",
+            "potranno verificarsi temporali locali",
+            "il tempo potrà risultare temporalesco a tratti"
         ])
 
     if pioggia >= 30:
         return random.choice([
-            "Sono previste piogge diffuse e abbondanti",
-            "La giornata sarà segnata da precipitazioni importanti",
-            "Sono possibili piogge insistenti e localmente forti"
+            "sono previste piogge diffuse e abbondanti",
+            "la giornata sarà segnata da precipitazioni importanti",
+            "sono possibili piogge insistenti e localmente forti"
         ])
 
     if pioggia >= 10:
         return random.choice([
-            "Sono previste precipitazioni sparse",
-            "Sono possibili piogge a tratti anche moderate",
-            "Potranno verificarsi piogge distribuite a macchia di leopardo"
+            "sono previste precipitazioni sparse",
+            "sono possibili piogge a tratti anche moderate",
+            "potranno verificarsi piogge distribuite a macchia di leopardo"
         ])
 
     if pioggia > 0:
         return random.choice([
-            "Non si esclude qualche pioggia locale",
-            "Potrebbe esserci qualche precipitazione sparsa",
-            "Qualche pioggia sarà possibile durante la giornata"
+            "potrebbe esserci qualche precipitazione sparsa",
+            "qualche pioggia locale non è esclusa",
+            "qualche pioggia sarà possibile durante la giornata"
         ])
 
     if "sole" in c or "soleggiato" in c or "sereno" in c:
         return random.choice([
-            "È prevista una giornata soleggiata",
-            "Il sole dominerà gran parte della giornata",
-            "È previsto tanto sole"
+            "è prevista una giornata soleggiata",
+            "il sole dominerà gran parte della giornata",
+            "è previsto tanto sole"
         ])
 
     if "parzialmente" in c or "poco nuvoloso" in c:
         return random.choice([
-            "È previsto cielo sereno o poco nuvoloso",
-            "Il cielo sarà abbastanza aperto, con qualche nuvola occasionale",
-            "Il cielo risulterà parzialmente nuvoloso"
+            "è previsto cielo sereno o poco nuvoloso",
+            "il cielo sarà abbastanza aperto, con qualche nuvola occasionale",
+            "il cielo risulterà parzialmente nuvoloso"
         ])
 
     if "nuvoloso" in c or "coperto" in c:
         return random.choice([
-            "Il cielo sarà in prevalenza nuvoloso",
-            "È previsto cielo spesso coperto",
-            "La nuvolosità sarà piuttosto presente"
+            "il cielo sarà in prevalenza nuvoloso",
+            "è previsto cielo spesso coperto",
+            "la nuvolosità sarà piuttosto presente"
         ])
 
-    return f"Il tempo sarà caratterizzato da {condizione.lower()}"
+    return f"il tempo sarà caratterizzato da {condizione.lower()}"
 
 
 def descrivi_pioggia(pioggia):
@@ -271,7 +269,7 @@ def chiara():
 
         risposta_chiara = (
             f"A {nome_localita} in questo momento ci sono {temperatura}°C. "
-            f"{frase_condizione}. "
+            f"{frase_condizione.capitalize()}. "
             f"Il vento soffia da {vento_locale.lower()}, con raffiche fino a {raffiche} km/h. "
             f"{frase_pioggia}"
             f"{consiglio}"
@@ -306,10 +304,13 @@ def chiara():
 
         if giorno == 1:
             nome_giorno = "domani"
+            apertura = f"Per domani a {nome_localita}"
         elif giorno == 2:
             nome_giorno = "tra 2 giorni"
+            apertura = f"A {nome_localita}, tra 2 giorni"
         else:
             nome_giorno = "tra 3 giorni"
+            apertura = f"A {nome_localita}, tra 3 giorni"
 
         nome_vento = nome_vento_da_gradi(direzione_vento)
         vento_locale = adatta_vento_sardegna(nome_vento, direzione_vento)
@@ -319,13 +320,7 @@ def chiara():
         consiglio = crea_consiglio(temperatura, vento, raffiche, pioggia, nuvole)
 
         risposta_chiara = (
-                    if giorno == 1:
-            apertura = f"Per domani a {nome_localita}"
-        else:
-            apertura = f"A {nome_localita}, {nome_giorno}"
-
-        risposta_chiara = (
-            f"{apertura}, {frase_condizione.lower()}. "
+            f"{apertura}, {frase_condizione}. "
             f"La temperatura oscillerà tra {temp_min}°C e {temp_max}°C, "
             f"con una media intorno ai {temperatura}°C. "
             f"Il vento potrà raggiungere circa {vento} km/h. "
