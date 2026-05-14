@@ -319,7 +319,13 @@ def chiara():
         consiglio = crea_consiglio(temperatura, vento, raffiche, pioggia, nuvole)
 
         risposta_chiara = (
-            f"Per {nome_giorno} a {nome_localita}, {frase_condizione.lower()}. "
+                    if giorno == 1:
+            apertura = f"Per domani a {nome_localita}"
+        else:
+            apertura = f"A {nome_localita}, {nome_giorno}"
+
+        risposta_chiara = (
+            f"{apertura}, {frase_condizione.lower()}. "
             f"La temperatura oscillerà tra {temp_min}°C e {temp_max}°C, "
             f"con una media intorno ai {temperatura}°C. "
             f"Il vento potrà raggiungere circa {vento} km/h. "
