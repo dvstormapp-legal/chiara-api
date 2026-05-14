@@ -68,17 +68,91 @@ def adatta_vento_sardegna(nome_vento, gradi):
     return nome_vento
 
 
+def descrivi_condizione(condizione, pioggia, raffiche):
+    c = condizione.lower()
+
+    if "temporale" in c or "thunder" in c:
+        if raffiche >= 50 or pioggia >= 10:
+            return random.choice([
+                "Sono possibili temporali, localmente anche intensi",
+                "Sono previsti fenomeni temporaleschi, con possibili fasi intense",
+                "Il tempo potrà risultare instabile, con temporali e fenomeni localmente forti"
+            ])
+        return random.choice([
+            "Sono possibili temporali",
+            "Potranno verificarsi temporali locali",
+            "Il tempo potrà risultare temporalesco a tratti"
+        ])
+
+    if pioggia >= 30:
+        return random.choice([
+            "Sono previste piogge diffuse e abbondanti",
+            "La giornata sarà segnata da precipitazioni importanti",
+            "Sono possibili piogge insistenti e localmente forti"
+        ])
+
+    if pioggia >= 10:
+        return random.choice([
+            "Sono previste precipitazioni sparse",
+            "Sono possibili piogge a tratti anche moderate",
+            "Potranno verificarsi piogge distribuite a macchia di leopardo"
+        ])
+
+    if pioggia > 0:
+        return random.choice([
+            "Non si esclude qualche pioggia locale",
+            "Potrebbe esserci qualche precipitazione sparsa",
+            "Qualche pioggia sarà possibile durante la giornata"
+        ])
+
+    if "sole" in c or "soleggiato" in c or "sereno" in c:
+        return random.choice([
+            "È prevista una giornata soleggiata",
+            "Il sole dominerà gran parte della giornata",
+            "È previsto tanto sole"
+        ])
+
+    if "parzialmente" in c or "poco nuvoloso" in c:
+        return random.choice([
+            "È previsto cielo sereno o poco nuvoloso",
+            "Il cielo sarà abbastanza aperto, con qualche nuvola occasionale",
+            "Il cielo risulterà parzialmente nuvoloso"
+        ])
+
+    if "nuvoloso" in c or "coperto" in c:
+        return random.choice([
+            "Il cielo sarà in prevalenza nuvoloso",
+            "È previsto cielo spesso coperto",
+            "La nuvolosità sarà piuttosto presente"
+        ])
+
+    return f"Il tempo sarà caratterizzato da {condizione.lower()}"
+
+
+def descrivi_pioggia(pioggia):
+    if pioggia >= 30:
+        return "Sono possibili piogge abbondanti."
+    elif pioggia >= 10:
+        return "Sono previste piogge sparse o a tratti moderate."
+    elif pioggia > 0:
+        return "Qualche pioggia locale non è esclusa."
+    else:
+        return "Non sono previste piogge."
+
+
 def crea_consiglio(temperatura, vento, raffiche, pioggia, nuvole):
     if raffiche >= 70:
         return " ⚠️ Attenzione al vento forte."
+    elif pioggia >= 30:
+        return " ⚠️ Prestare attenzione a possibili piogge intense."
     elif pioggia >= 10:
-        return " ☔ Possibili rovesci intensi."
+        return " ☔ Meglio tenere un ombrello a portata di mano."
     elif temperatura >= 38:
         return " 🥵 Caldo intenso, meglio evitare le ore centrali."
     elif temperatura <= 0:
         return " ❄️ Temperature molto basse."
     elif vento <= 15 and pioggia == 0:
-        return " 🌤️ Giornata abbastanza tranquilla."
+        return " 🌤️ Nel complesso sarà una situazione abbastanza tranquilla."
     elif nuvole > 80:
         return " ☁️ Meglio tenere d'occhio il cielo."
     return ""
@@ -89,7 +163,6 @@ def chiara():
     nome_cercato = request.args.get("localita", "Cagliari")
     testo_input = nome_cercato.lower().strip()
 
-    # 🔴 Parolacce / input provocatori
     for parola in PAROLACCE:
         if parola in testo_input:
             return jsonify({
@@ -97,7 +170,6 @@ def chiara():
                 "tipo": "gaggiu"
             })
 
-    # 🌍 Località fuori Sardegna
     for luogo in LOCALITA_NON_SARDE:
         if luogo in testo_input:
             return jsonify({
@@ -147,7 +219,7 @@ def chiara():
         return jsonify({
             "descrizione": "Sei sicuro di aver scritto bene?",
             "tipo": "localita_non_trovata"
-        }), 404
+        })
 
     nome_localita = localita_trovata["nome"]
     lat = localita_trovata["lat"]
@@ -190,6 +262,21 @@ def chiara():
         condizione = meteo["condition"]["text"]
         nome_giorno = "adesso"
 
+        nome_vento = nome_vento_da_gradi(direzione_vento)
+        vento_locale = adatta_vento_sardegna(nome_vento, direzione_vento)
+
+        frase_condizione = descrivi_condizione(condizione, pioggia, raffiche)
+        frase_pioggia = descrivi_pioggia(pioggia)
+        consiglio = crea_consiglio(temperatura, vento, raffiche, pioggia, nuvole)
+
+        risposta_chiara = (
+            f"A {nome_localita} in questo momento ci sono {temperatura}°C. "
+            f"{frase_condizione}. "
+            f"Il vento soffia da {vento_locale.lower()}, con raffiche fino a {raffiche} km/h. "
+            f"{frase_pioggia}"
+            f"{consiglio}"
+        )
+
     else:
         if "forecast" not in dati:
             return jsonify({
@@ -224,8 +311,21 @@ def chiara():
         else:
             nome_giorno = "tra 3 giorni"
 
-    nome_vento = nome_vento_da_gradi(direzione_vento)
-    vento_locale = adatta_vento_sardegna(nome_vento, direzione_vento)
+        nome_vento = nome_vento_da_gradi(direzione_vento)
+        vento_locale = adatta_vento_sardegna(nome_vento, direzione_vento)
+
+        frase_condizione = descrivi_condizione(condizione, pioggia, raffiche)
+        frase_pioggia = descrivi_pioggia(pioggia)
+        consiglio = crea_consiglio(temperatura, vento, raffiche, pioggia, nuvole)
+
+        risposta_chiara = (
+            f"Per {nome_giorno} a {nome_localita}, {frase_condizione.lower()}. "
+            f"La temperatura oscillerà tra {temp_min}°C e {temp_max}°C, "
+            f"con una media intorno ai {temperatura}°C. "
+            f"Il vento potrà raggiungere circa {vento} km/h. "
+            f"{frase_pioggia}"
+            f"{consiglio}"
+        )
 
     if raffiche >= 60:
         valutazione_vento = "vento molto forte"
@@ -240,29 +340,6 @@ def chiara():
         valutazione_meteo = "non si esclude qualche precipitazione"
     else:
         valutazione_meteo = "non sono previste precipitazioni rilevanti"
-
-    consiglio = crea_consiglio(temperatura, vento, raffiche, pioggia, nuvole)
-
-    if giorno == 0:
-        risposta_chiara = (
-            f"A {nome_localita} ci sono {temperatura}°C. "
-            f"Il vento soffia da {vento_locale.lower()}, con raffiche fino a {raffiche} km/h. "
-            f"Il cielo risulta: {condizione.lower()}. "
-            f"{valutazione_meteo.capitalize()}."
-            f"{consiglio}"
-        )
-    else:
-        risposta_chiara = (
-            f"A {nome_localita}, {nome_giorno}, ci si aspetta una giornata con {condizione.lower()}. "
-            f"Le temperature saranno comprese tra {temp_min}°C e {temp_max}°C, "
-            f"con una media intorno ai {temperatura}°C. "
-            f"Il vento potrà raggiungere circa {vento} km/h: {valutazione_vento}."
-        )
-
-        if pioggia > 0:
-            risposta_chiara += " Possibili precipitazioni durante la giornata."
-
-        risposta_chiara += consiglio
 
     risposta_finale = {
         "localita": nome_localita,
