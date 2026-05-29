@@ -66,7 +66,14 @@ def adatta_vento_sardegna(nome_vento, gradi):
     return nome_vento
 
 
-def descrivi_condizione(condizione, pioggia, raffiche):
+def descrivi_condizione(condizione, pioggia, raffiche, is_day=True):
+    """
+    Trasforma la condizione grezza dell'API in una frase naturale per Chiara.
+
+    is_day serve per evitare frasi sbagliate di notte:
+    - giorno + sereno = cielo sereno / situazione stabile
+    - notte + sereno = notte serena / cielo notturno aperto
+    """
     c = condizione.lower()
 
     if "temporale" in c or "thunder" in c:
@@ -85,7 +92,7 @@ def descrivi_condizione(condizione, pioggia, raffiche):
     if pioggia >= 30:
         return random.choice([
             "sono previste piogge diffuse e abbondanti",
-            "la giornata sarà segnata da precipitazioni importanti",
+            "la situazione sarà segnata da precipitazioni importanti",
             "sono possibili piogge insistenti e localmente forti"
         ])
 
@@ -100,31 +107,45 @@ def descrivi_condizione(condizione, pioggia, raffiche):
         return random.choice([
             "potrebbe esserci qualche precipitazione sparsa",
             "qualche pioggia locale non è esclusa",
-            "qualche pioggia sarà possibile durante la giornata"
+            "qualche pioggia sarà possibile"
         ])
 
     if "sole" in c or "soleggiato" in c or "sereno" in c:
-        return random.choice([
-            "è prevista una giornata soleggiata",
-            "il sole dominerà gran parte della giornata",
-            "è previsto tanto sole"
-        ])
+        if is_day:
+            return random.choice([
+                "il cielo è sereno o poco nuvoloso",
+                "il tempo è stabile, con cielo in prevalenza sereno",
+                "il cielo si presenta abbastanza aperto"
+            ])
+        else:
+            return random.choice([
+                "il cielo è sereno o poco nuvoloso",
+                "la notte si presenta serena o poco nuvolosa",
+                "il cielo notturno è abbastanza aperto"
+            ])
 
     if "parzialmente" in c or "poco nuvoloso" in c:
-        return random.choice([
-            "è previsto cielo sereno o poco nuvoloso",
-            "il cielo sarà abbastanza aperto, con qualche nuvola occasionale",
-            "il cielo risulterà parzialmente nuvoloso"
-        ])
+        if is_day:
+            return random.choice([
+                "il cielo è sereno o poco nuvoloso",
+                "il cielo sarà abbastanza aperto, con qualche nuvola occasionale",
+                "il cielo risulta parzialmente nuvoloso"
+            ])
+        else:
+            return random.choice([
+                "il cielo notturno è parzialmente nuvoloso",
+                "la notte si presenta con qualche nube, ma senza segnali particolari",
+                "il cielo è poco o parzialmente nuvoloso"
+            ])
 
     if "nuvoloso" in c or "coperto" in c:
         return random.choice([
-            "il cielo sarà in prevalenza nuvoloso",
-            "è previsto cielo spesso coperto",
-            "la nuvolosità sarà piuttosto presente"
+            "il cielo è in prevalenza nuvoloso",
+            "la nuvolosità è piuttosto presente",
+            "il cielo si presenta spesso coperto"
         ])
 
-    return f"il tempo sarà caratterizzato da {condizione.lower()}"
+    return f"il tempo è caratterizzato da {condizione.lower()}"
 
 
 def descrivi_pioggia(pioggia):
@@ -200,8 +221,14 @@ def chiara():
             "errore": "WEATHER_API_KEY mancante"
         }), 500
 
-    with open("localita_sardegna.json", "r", encoding="utf-8") as file:
-        localita_sardegna = json.load(file)
+    try:
+        with open("localita_sardegna.json", "r", encoding="utf-8") as file:
+            localita_sardegna = json.load(file)
+    except Exception as e:
+        return jsonify({
+            "descrizione": "Non riesco a leggere l'elenco delle località.",
+            "errore": str(e)
+        }), 500
 
     localita_trovata = None
 
@@ -239,8 +266,14 @@ def chiara():
             "&lang=it"
         )
 
-    risposta = requests.get(url, timeout=10)
-    dati = risposta.json()
+    try:
+        risposta = requests.get(url, timeout=10)
+        dati = risposta.json()
+    except Exception as e:
+        return jsonify({
+            "descrizione": "Non riesco a contattare il servizio meteo in questo momento.",
+            "errore": str(e)
+        }), 502
 
     if giorno == 0:
         if "current" not in dati:
@@ -258,12 +291,13 @@ def chiara():
         pioggia = meteo["precip_mm"]
         nuvole = meteo["cloud"]
         condizione = meteo["condition"]["text"]
+        is_day = meteo.get("is_day", 1) == 1
         nome_giorno = "adesso"
 
         nome_vento = nome_vento_da_gradi(direzione_vento)
         vento_locale = adatta_vento_sardegna(nome_vento, direzione_vento)
 
-        frase_condizione = descrivi_condizione(condizione, pioggia, raffiche)
+        frase_condizione = descrivi_condizione(condizione, pioggia, raffiche, is_day)
         frase_pioggia = descrivi_pioggia(pioggia)
         consiglio = crea_consiglio(temperatura, vento, raffiche, pioggia, nuvole)
 
@@ -297,7 +331,6 @@ def chiara():
         temp_max = meteo["maxtemp_c"]
         vento = meteo["maxwind_kph"]
         raffiche = vento
-        direzione_vento = 0
         pioggia = meteo["totalprecip_mm"]
         nuvole = 0
         condizione = meteo["condition"]["text"]
@@ -312,10 +345,7 @@ def chiara():
             nome_giorno = "tra 3 giorni"
             apertura = f"A {nome_localita}, tra 3 giorni"
 
-        nome_vento = nome_vento_da_gradi(direzione_vento)
-        vento_locale = adatta_vento_sardegna(nome_vento, direzione_vento)
-
-        frase_condizione = descrivi_condizione(condizione, pioggia, raffiche)
+        frase_condizione = descrivi_condizione(condizione, pioggia, raffiche, True)
         frase_pioggia = descrivi_pioggia(pioggia)
         consiglio = crea_consiglio(temperatura, vento, raffiche, pioggia, nuvole)
 
@@ -369,6 +399,7 @@ def chiara():
             "locale": vento_locale
         }
         risposta_finale["copertura_nuvolosa"] = nuvole
+        risposta_finale["is_day"] = is_day
     else:
         risposta_finale["temperatura_min"] = temp_min
         risposta_finale["temperatura_max"] = temp_max
