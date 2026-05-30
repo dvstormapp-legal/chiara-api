@@ -41,7 +41,31 @@ def home():
     return "Chiara API attiva"
 
 
+def leggi_numero(dizionario, chiavi, valore_default=None):
+    """
+    Legge un numero da un dizionario provando più nomi di chiave.
+    Serve per evitare crash se l'API restituisce nomi diversi o dati incompleti.
+    """
+    for chiave in chiavi:
+        if chiave in dizionario and dizionario[chiave] is not None:
+            try:
+                return float(dizionario[chiave])
+            except (TypeError, ValueError):
+                pass
+    return valore_default
+
+
+def leggi_testo(dizionario, chiavi, valore_default=""):
+    for chiave in chiavi:
+        if chiave in dizionario and dizionario[chiave] is not None:
+            return str(dizionario[chiave])
+    return valore_default
+
+
 def nome_vento_da_gradi(gradi):
+    if gradi is None:
+        return "vento non definito"
+
     if gradi >= 337.5 or gradi < 22.5:
         return "Tramontana"
     elif gradi < 67.5:
@@ -61,19 +85,15 @@ def nome_vento_da_gradi(gradi):
 
 
 def adatta_vento_sardegna(nome_vento, gradi):
+    if gradi is None:
+        return nome_vento
+
     if nome_vento == "Ponente" and gradi > 280:
         return "Ponente-maestrale"
     return nome_vento
 
 
 def descrivi_condizione(condizione, pioggia, raffiche, is_day=True):
-    """
-    Trasforma la condizione grezza dell'API in una frase naturale per Chiara.
-
-    is_day serve per evitare frasi sbagliate di notte:
-    - giorno + sereno = cielo sereno / situazione stabile
-    - notte + sereno = notte serena / cielo notturno aperto
-    """
     c = condizione.lower()
 
     if "temporale" in c or "thunder" in c:
@@ -110,7 +130,7 @@ def descrivi_condizione(condizione, pioggia, raffiche, is_day=True):
             "qualche pioggia sarà possibile"
         ])
 
-    if "sole" in c or "soleggiato" in c or "sereno" in c:
+    if "sole" in c or "soleggiato" in c or "sereno" in c or "clear" in c:
         if is_day:
             return random.choice([
                 "il cielo è sereno o poco nuvoloso",
@@ -124,7 +144,7 @@ def descrivi_condizione(condizione, pioggia, raffiche, is_day=True):
                 "il cielo notturno è abbastanza aperto"
             ])
 
-    if "parzialmente" in c or "poco nuvoloso" in c:
+    if "parzialmente" in c or "poco nuvoloso" in c or "partly cloudy" in c:
         if is_day:
             return random.choice([
                 "il cielo è sereno o poco nuvoloso",
@@ -138,14 +158,17 @@ def descrivi_condizione(condizione, pioggia, raffiche, is_day=True):
                 "il cielo è poco o parzialmente nuvoloso"
             ])
 
-    if "nuvoloso" in c or "coperto" in c:
+    if "nuvoloso" in c or "coperto" in c or "cloud" in c or "overcast" in c:
         return random.choice([
             "il cielo è in prevalenza nuvoloso",
             "la nuvolosità è piuttosto presente",
             "il cielo si presenta spesso coperto"
         ])
 
-    return f"il tempo è caratterizzato da {condizione.lower()}"
+    if condizione:
+        return f"il tempo è caratterizzato da {condizione.lower()}"
+
+    return "i dati disponibili non descrivono chiaramente lo stato del cielo"
 
 
 def descrivi_pioggia(pioggia):
@@ -175,6 +198,22 @@ def crea_consiglio(temperatura, vento, raffiche, pioggia, nuvole):
     elif nuvole > 80:
         return " ☁️ Meglio tenere d'occhio il cielo."
     return ""
+
+
+def carica_localita():
+    with open("localita_sardegna.json", "r", encoding="utf-8") as file:
+        return json.load(file)
+
+
+def trova_localita(testo_input, localita_sardegna):
+    for localita in localita_sardegna:
+        nome = localita.get("nome", "").lower()
+        id_localita = localita.get("id", "").lower()
+
+        if testo_input in nome or testo_input in id_localita:
+            return localita
+
+    return None
 
 
 @app.route("/chiara")
@@ -222,23 +261,14 @@ def chiara():
         }), 500
 
     try:
-        with open("localita_sardegna.json", "r", encoding="utf-8") as file:
-            localita_sardegna = json.load(file)
+        localita_sardegna = carica_localita()
     except Exception as e:
         return jsonify({
             "descrizione": "Non riesco a leggere l'elenco delle località.",
             "errore": str(e)
         }), 500
 
-    localita_trovata = None
-
-    for localita in localita_sardegna:
-        nome = localita["nome"].lower()
-        id_localita = localita["id"].lower()
-
-        if testo_input in nome or testo_input in id_localita:
-            localita_trovata = localita
-            break
+    localita_trovata = trova_localita(testo_input, localita_sardegna)
 
     if localita_trovata is None:
         return jsonify({
@@ -267,30 +297,78 @@ def chiara():
         )
 
     try:
-        risposta = requests.get(url, timeout=10)
-        dati = risposta.json()
+        risposta_api = requests.get(url, timeout=10)
+        dati = risposta_api.json()
     except Exception as e:
         return jsonify({
             "descrizione": "Non riesco a contattare il servizio meteo in questo momento.",
             "errore": str(e)
         }), 502
 
+    if "error" in dati:
+        return jsonify({
+            "descrizione": "Il servizio meteo non ha restituito dati validi per questa richiesta.",
+            "errore": dati.get("error")
+        }), 502
+
     if giorno == 0:
         if "current" not in dati:
             return jsonify({
-                "descrizione": "Non riesco a recuperare i dati meteo in questo momento.",
+                "descrizione": "Non riesco a recuperare i dati meteo attuali in questo momento.",
                 "debug": dati
             }), 502
 
         meteo = dati["current"]
 
-        temperatura = meteo["temp_c"]
-        vento = meteo["wind_kph"]
-        raffiche = meteo.get("gust_kph", vento)
-        direzione_vento = meteo["wind_degree"]
-        pioggia = meteo["precip_mm"]
-        nuvole = meteo["cloud"]
-        condizione = meteo["condition"]["text"]
+        temperatura = leggi_numero(
+            meteo,
+            ["temp_c", "temperature_c", "temperature_2m", "temperature"],
+            None
+        )
+
+        if temperatura is None:
+            return jsonify({
+                "descrizione": "Al momento non ho dati abbastanza affidabili sulla temperatura per questa località.",
+                "errore": "temperatura_mancante",
+                "debug_keys": list(meteo.keys())
+            }), 502
+
+        vento = leggi_numero(
+            meteo,
+            ["wind_kph", "wind_speed_10m", "windspeed_kph", "wind_speed"],
+            0
+        )
+
+        raffiche = leggi_numero(
+            meteo,
+            ["gust_kph", "wind_gusts_10m", "windgust_kph", "gust"],
+            vento
+        )
+
+        direzione_vento = leggi_numero(
+            meteo,
+            ["wind_degree", "wind_direction_10m", "wind_dir_degree"],
+            None
+        )
+
+        pioggia = leggi_numero(
+            meteo,
+            ["precip_mm", "precipitation", "rain", "rain_mm"],
+            0
+        )
+
+        nuvole = leggi_numero(
+            meteo,
+            ["cloud", "cloud_cover", "cloudcover"],
+            0
+        )
+
+        condizione = ""
+        if isinstance(meteo.get("condition"), dict):
+            condizione = meteo.get("condition", {}).get("text", "")
+        else:
+            condizione = leggi_testo(meteo, ["condition", "weather", "summary"], "")
+
         is_day = meteo.get("is_day", 1) == 1
         nome_giorno = "adesso"
 
@@ -301,10 +379,21 @@ def chiara():
         frase_pioggia = descrivi_pioggia(pioggia)
         consiglio = crea_consiglio(temperatura, vento, raffiche, pioggia, nuvole)
 
+        if direzione_vento is not None:
+            frase_vento = (
+                f"Il vento soffia da {vento_locale.lower()}, "
+                f"con raffiche fino a {raffiche:g} km/h. "
+            )
+        else:
+            frase_vento = (
+                f"Il vento soffia a circa {vento:g} km/h, "
+                f"con raffiche fino a {raffiche:g} km/h. "
+            )
+
         risposta_chiara = (
-            f"A {nome_localita} in questo momento ci sono {temperatura}°C. "
+            f"A {nome_localita} in questo momento ci sono {temperatura:g}°C. "
             f"{frase_condizione.capitalize()}. "
-            f"Il vento soffia da {vento_locale.lower()}, con raffiche fino a {raffiche} km/h. "
+            f"{frase_vento}"
             f"{frase_pioggia}"
             f"{consiglio}"
         )
@@ -316,7 +405,7 @@ def chiara():
                 "debug": dati
             }), 502
 
-        forecast_days = dati["forecast"]["forecastday"]
+        forecast_days = dati["forecast"].get("forecastday", [])
 
         if giorno >= len(forecast_days):
             return jsonify({
@@ -324,16 +413,28 @@ def chiara():
             }), 400
 
         giorno_dati = forecast_days[giorno]
-        meteo = giorno_dati["day"]
+        meteo = giorno_dati.get("day", {})
 
-        temperatura = meteo["avgtemp_c"]
-        temp_min = meteo["mintemp_c"]
-        temp_max = meteo["maxtemp_c"]
-        vento = meteo["maxwind_kph"]
+        temperatura = leggi_numero(meteo, ["avgtemp_c", "temp_c", "temperature"], None)
+        temp_min = leggi_numero(meteo, ["mintemp_c", "temp_min", "temperature_min"], None)
+        temp_max = leggi_numero(meteo, ["maxtemp_c", "temp_max", "temperature_max"], None)
+
+        if temperatura is None or temp_min is None or temp_max is None:
+            return jsonify({
+                "descrizione": "Al momento non ho dati abbastanza affidabili sulla temperatura prevista per questa località.",
+                "errore": "temperatura_previsione_mancante",
+                "debug_keys": list(meteo.keys())
+            }), 502
+
+        vento = leggi_numero(meteo, ["maxwind_kph", "wind_kph", "wind_speed"], 0)
         raffiche = vento
-        pioggia = meteo["totalprecip_mm"]
+        pioggia = leggi_numero(meteo, ["totalprecip_mm", "precip_mm", "precipitation"], 0)
         nuvole = 0
-        condizione = meteo["condition"]["text"]
+
+        if isinstance(meteo.get("condition"), dict):
+            condizione = meteo.get("condition", {}).get("text", "")
+        else:
+            condizione = leggi_testo(meteo, ["condition", "weather", "summary"], "")
 
         if giorno == 1:
             nome_giorno = "domani"
@@ -351,9 +452,9 @@ def chiara():
 
         risposta_chiara = (
             f"{apertura}, {frase_condizione}. "
-            f"La temperatura oscillerà tra {temp_min}°C e {temp_max}°C, "
-            f"con una media intorno ai {temperatura}°C. "
-            f"Il vento potrà raggiungere circa {vento} km/h. "
+            f"La temperatura oscillerà tra {temp_min:g}°C e {temp_max:g}°C, "
+            f"con una media intorno ai {temperatura:g}°C. "
+            f"Il vento potrà raggiungere circa {vento:g} km/h. "
             f"{frase_pioggia}"
             f"{consiglio}"
         )
