@@ -419,12 +419,14 @@ def chiara():
         temp_min = leggi_numero(meteo, ["mintemp_c", "temp_min", "temperature_min"], None)
         temp_max = leggi_numero(meteo, ["maxtemp_c", "temp_max", "temperature_max"], None)
 
-        if temperatura is None or temp_min is None or temp_max is None:
+        if temperatura is None:
             return jsonify({
-                "descrizione": "Al momento non ho dati abbastanza affidabili sulla temperatura prevista per questa località.",
-                "errore": "temperatura_previsione_mancante",
-                "debug_keys": list(meteo.keys())
-            }), 502
+        "descrizione": "Al momento non ho dati abbastanza affidabili sulla temperatura per questa località.",
+        "errore": "temperatura_mancante",
+        "debug_keys": list(meteo.keys()),
+        "debug_current": meteo,
+        "debug_response": dati
+             }), 502
 
         vento = leggi_numero(meteo, ["maxwind_kph", "wind_kph", "wind_speed"], 0)
         raffiche = vento
