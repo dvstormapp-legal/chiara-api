@@ -28,22 +28,22 @@
     "lng": 8.9325127
   },
   {
-    "id": "arresi_sant_anna_arresi",
-    "nome": "Arresi/Sant'Anna Arresi",
+    "id": "sant_anna_arresi",
+    "nome": "Sant'Anna Arresi",
     "provincia": "",
     "lat": 38.9933143,
     "lng": 8.6134337
   },
   {
-    "id": "sarrocu_sarroch",
-    "nome": "Sarrocu/Sarroch",
+    "id": "sarroch",
+    "nome": "Sarroch",
     "provincia": "",
     "lat": 39.0706509,
     "lng": 8.9657714
   },
   {
-    "id": "santu_antiogu_sant_antioco",
-    "nome": "Santu Antiogu/Sant'Antioco",
+    "id": "sant_antioco",
+    "nome": "Sant'Antioco",
     "provincia": "",
     "lat": 38.9837818,
     "lng": 8.4445691
@@ -77,15 +77,15 @@
     "lng": 8.7656455
   },
   {
-    "id": "santu_giuanni_su_rgiu_san_giovanni_suergiu",
-    "nome": "Santu Giuanni Suèrgiu/San Giovanni Suergiu",
+    "id": "san_giovanni_suergiu",
+    "nome": "San Giovanni Suergiu",
     "provincia": "",
     "lat": 39.1045885,
     "lng": 8.5117717
   },
   {
-    "id": "santu_perdu_villa_san_pietro",
-    "nome": "Santu Perdu/Villa San Pietro",
+    "id": "villa_san_pietro",
+    "nome": "Villa San Pietro",
     "provincia": "",
     "lat": 39.0652401,
     "lng": 8.9331138
@@ -98,29 +98,29 @@
     "lng": 8.586086
   },
   {
-    "id": "sa_baronia_villaperuccio",
-    "nome": "Sa Baronia/Villaperuccio",
+    "id": "villaperuccio",
+    "nome": "Villaperuccio",
     "provincia": "",
     "lat": 39.115656,
     "lng": 8.6506973
   },
   {
-    "id": "ass_mini_assemini",
-    "nome": "Assèmini/Assemini",
+    "id": "assemini",
+    "nome": "Assemini",
     "provincia": "",
     "lat": 39.2168463,
     "lng": 8.9477491
   },
   {
-    "id": "c_des_dda_calasetta",
-    "nome": "Câdesédda/Calasetta",
+    "id": "calasetta",
+    "nome": "Calasetta",
     "provincia": "",
     "lat": 39.0685807,
     "lng": 8.3876176
   },
   {
-    "id": "cabuderra_capoterra",
-    "nome": "Cabuderra/Capoterra",
+    "id": "capoterra",
+    "nome": "Capoterra",
     "provincia": "",
     "lat": 39.1475174,
     "lng": 8.9613633
@@ -133,8 +133,8 @@
     "lng": 8.7598839
   },
   {
-    "id": "crabonaxa_villasimius",
-    "nome": "Crabonaxa/Villasimius",
+    "id": "villasimius",
+    "nome": "Villasimius",
     "provincia": "",
     "lat": 39.1439942,
     "lng": 9.5256752
@@ -147,8 +147,8 @@
     "lng": 8.615447
   },
   {
-    "id": "s_nnia_sinnai",
-    "nome": "Sìnnia/Sinnai",
+    "id": "sinnai",
+    "nome": "Sinnai",
     "provincia": "",
     "lat": 39.2726521,
     "lng": 9.3301785
@@ -161,8 +161,8 @@
     "lng": 8.5214919
   },
   {
-    "id": "narcau_narcao",
-    "nome": "Narcau/Narcao",
+    "id": "narcao",
+    "nome": "Narcao",
     "provincia": "",
     "lat": 39.1804485,
     "lng": 8.675458
@@ -175,71 +175,71 @@
     "lng": 9.3459302
   },
   {
-    "id": "portescusi_portoscuso",
-    "nome": "Portescusi/Portoscuso",
+    "id": "portoscuso",
+    "nome": "Portoscuso",
     "provincia": "",
     "lat": 39.1981837,
     "lng": 8.4058228
   },
   {
-    "id": "u_p_ize_carloforte",
-    "nome": "U Pàize/Carloforte",
+    "id": "carloforte",
+    "nome": "Carloforte",
     "provincia": "",
     "lat": 39.1444144,
     "lng": 8.2662976
   },
   {
-    "id": "uda_uta",
-    "nome": "Uda/Uta",
+    "id": "uta",
+    "nome": "Uta",
     "provincia": "",
     "lat": 39.2267915,
     "lng": 8.9147022
   },
   {
-    "id": "casteddu_cagliari",
-    "nome": "Casteddu/Cagliari",
+    "id": "cagliari",
+    "nome": "Cagliari",
     "provincia": "",
     "lat": 39.2203971,
     "lng": 9.0940912
   },
   {
-    "id": "quartu_sant_aleni_quartu_sant_elena",
-    "nome": "Quartu Sant'Aleni/Quartu Sant'Elena",
+    "id": "quartu_sant_elena",
+    "nome": "Quartu Sant'Elena",
     "provincia": "",
     "lat": 39.2133328,
     "lng": 9.2751286
   },
   {
-    "id": "igr_sias_iglesias",
-    "nome": "Igrèsias/Iglesias",
+    "id": "iglesias",
+    "nome": "Iglesias",
     "provincia": "",
     "lat": 39.2971485,
     "lng": 8.5416976
   },
   {
-    "id": "bidda_matzr_xia_villamassargia",
-    "nome": "Bidda Matzràxia/Villamassargia",
+    "id": "villamassargia",
+    "nome": "Villamassargia",
     "provincia": "",
     "lat": 39.258313,
     "lng": 8.6713186
   },
   {
-    "id": "deximumannu_decimomannu",
-    "nome": "Deximumannu/Decimomannu",
+    "id": "decimomannu",
+    "nome": "Decimomannu",
     "provincia": "",
     "lat": 39.2876483,
     "lng": 8.9289611
   },
   {
-    "id": "quart_cciu_quartucciu",
-    "nome": "Quartùcciu/Quartucciu",
+    "id": "quartucciu",
+    "nome": "Quartucciu",
     "provincia": "",
     "lat": 39.2618567,
     "lng": 9.2695404
   },
   {
-    "id": "pa_li_monserrato",
-    "nome": "Paùli/Monserrato",
+    "id": "monserrato",
+    "nome": "Monserrato",
     "provincia": "",
     "lat": 39.2640152,
     "lng": 9.1342849
@@ -252,8 +252,8 @@
     "lng": 8.4447079
   },
   {
-    "id": "su_masu_elmas",
-    "nome": "Su Masu/Elmas",
+    "id": "elmas",
+    "nome": "Elmas",
     "provincia": "",
     "lat": 39.2614636,
     "lng": 9.049998
@@ -266,22 +266,22 @@
     "lng": 9.08105
   },
   {
-    "id": "ceraxus_selargius",
-    "nome": "Ceraxus/Selargius",
+    "id": "selargius",
+    "nome": "Selargius",
     "provincia": "",
     "lat": 39.2840125,
     "lng": 9.1400852
   },
   {
-    "id": "biddaspitziosa_villaspeciosa",
-    "nome": "Biddaspitziosa/Villaspeciosa",
+    "id": "villaspeciosa",
+    "nome": "Villaspeciosa",
     "provincia": "",
     "lat": 39.2795083,
     "lng": 8.8937646
   },
   {
-    "id": "s_timu_settimo_san_pietro",
-    "nome": "Sètimu/Settimo San Pietro",
+    "id": "settimo_san_pietro",
+    "nome": "Settimo San Pietro",
     "provincia": "",
     "lat": 39.3064793,
     "lng": 9.1657208
@@ -294,29 +294,29 @@
     "lng": 8.6897025
   },
   {
-    "id": "domunoas_domusnovas",
-    "nome": "Domunoas/Domusnovas",
+    "id": "domusnovas",
+    "nome": "Domusnovas",
     "provincia": "",
     "lat": 39.3652368,
     "lng": 8.6245851
   },
   {
-    "id": "santu_idu_san_vito",
-    "nome": "Santu Idu/San Vito",
+    "id": "san_vito",
+    "nome": "San Vito",
     "provincia": "",
     "lat": 39.4042506,
     "lng": 9.5080273
   },
   {
-    "id": "deximeputzu_decimoputzu",
-    "nome": "Deximeputzu/Decimoputzu",
+    "id": "decimoputzu",
+    "nome": "Decimoputzu",
     "provincia": "",
     "lat": 39.3456576,
     "lng": 8.8865235
   },
   {
-    "id": "santu_sparau_san_sperate",
-    "nome": "Santu Sparau/San Sperate",
+    "id": "san_sperate",
+    "nome": "San Sperate",
     "provincia": "",
     "lat": 39.3544029,
     "lng": 9.0178973
@@ -329,78 +329,78 @@
     "lng": 9.1502504
   },
   {
-    "id": "sol_minis_soleminis",
-    "nome": "Solèminis/Soleminis",
+    "id": "soleminis",
+    "nome": "Soleminis",
     "provincia": "",
     "lat": 39.3491128,
     "lng": 9.1820015
   },
   {
-    "id": "biddesorris_villasor",
-    "nome": "Biddesorris/Villasor",
+    "id": "villasor",
+    "nome": "Villasor",
     "provincia": "",
     "lat": 39.3782071,
     "lng": 8.895099
   },
   {
-    "id": "muristenis_monastir",
-    "nome": "Muristenis/Monastir",
+    "id": "monastir",
+    "nome": "Monastir",
     "provincia": "",
     "lat": 39.3805244,
     "lng": 9.0438555
   },
   {
-    "id": "biddaramosa_vallermosa",
-    "nome": "Biddaramosa/Vallermosa",
+    "id": "vallermosa",
+    "nome": "Vallermosa",
     "provincia": "",
     "lat": 39.3666403,
     "lng": 8.7748752
   },
   {
-    "id": "patiolla_dolianova",
-    "nome": "Patiolla/Dolianova",
+    "id": "dolianova",
+    "nome": "Dolianova",
     "provincia": "",
     "lat": 39.4055384,
     "lng": 9.2058461
   },
   {
-    "id": "bugerru_buggerru",
-    "nome": "Bugerru/Buggerru",
+    "id": "buggerru",
+    "nome": "Buggerru",
     "provincia": "",
     "lat": 39.407629,
     "lng": 8.4336796
   },
   {
-    "id": "fr_mini_majori_fluminimaggiore",
-    "nome": "Frùmini Majori/Fluminimaggiore",
+    "id": "fluminimaggiore",
+    "nome": "Fluminimaggiore",
     "provincia": "",
     "lat": 39.4277641,
     "lng": 8.4883561
   },
   {
-    "id": "biddacidru_villacidro",
-    "nome": "Biddacidru/Villacidro",
+    "id": "villacidro",
+    "nome": "Villacidro",
     "provincia": "",
     "lat": 39.4449301,
     "lng": 8.725286
   },
   {
-    "id": "ssana_ussana",
-    "nome": "Ùssana/Ussana",
+    "id": "ussana",
+    "nome": "Ussana",
     "provincia": "",
     "lat": 39.4027643,
     "lng": 9.0881388
   },
   {
-    "id": "brucei_burcei",
-    "nome": "Brucei/Burcei",
+    "id": "burcei",
+    "nome": "Burcei",
     "provincia": "",
     "lat": 39.3650734,
     "lng": 9.4009294
   },
   {
-    "id": "nur_minis_nuraminis",
-    "nome": "Nuràminis/Nuraminis",
+    "id": "nuraminis",
+    "nome": "Nuraminis",
     "provincia": "",
     "lat": 39.4410042,
     "lng": 9.0110033
@@ -413,22 +413,22 @@
     "lng": 8.9023947
   },
   {
-    "id": "biddesatu_villasalto",
-    "nome": "Biddesatu/Villasalto",
+    "id": "villasalto",
+    "nome": "Villasalto",
     "provincia": "",
     "lat": 39.4807353,
     "lng": 9.385402
   },
   {
-    "id": "gonnos_gonnosfanadiga",
-    "nome": "Gonnos/Gonnosfanadiga",
+    "id": "gonnosfanadiga",
+    "nome": "Gonnosfanadiga",
     "provincia": "",
     "lat": 39.5333404,
     "lng": 8.633438
   },
   {
-    "id": "biddeputzi_villaputzu",
-    "nome": "Biddeputzi/Villaputzu",
+    "id": "villaputzu",
+    "nome": "Villaputzu",
     "provincia": "",
     "lat": 39.5273379,
     "lng": 9.5382718
@@ -448,8 +448,8 @@
     "lng": 9.0526462
   },
   {
-    "id": "pauli_gerrei_san_nicol_gerrei",
-    "nome": "Pauli Gerrei/San Nicolò Gerrei",
+    "id": "san_nicol_gerrei",
+    "nome": "San Nicolò Gerrei",
     "provincia": "",
     "lat": 39.4809036,
     "lng": 9.2955412
@@ -490,8 +490,8 @@
     "lng": 8.907767
   },
   {
-    "id": "seddori_sanluri",
-    "nome": "Seddori/Sanluri",
+    "id": "sanluri",
+    "nome": "Sanluri",
     "provincia": "",
     "lat": 39.5451435,
     "lng": 8.879061
@@ -504,8 +504,8 @@
     "lng": 9.0883348
   },
   {
-    "id": "pramantellu_pimentel",
-    "nome": "Pramantellu/Pimentel",
+    "id": "pimentel",
+    "nome": "Pimentel",
     "provincia": "",
     "lat": 39.498267,
     "lng": 9.0663501
@@ -518,15 +518,15 @@
     "lng": 9.1424064
   },
   {
-    "id": "santu_asili_e_monti_san_basilio",
-    "nome": "Santu 'Asili 'e Monti/San Basilio",
+    "id": "san_basilio",
+    "nome": "San Basilio",
     "provincia": "",
     "lat": 39.5199045,
     "lng": 9.2081243
   },
   {
-    "id": "santu_ngiu_san_gavino_monreale",
-    "nome": "Santu 'Èngiu/San Gavino Monreale",
+    "id": "san_gavino_monreale",
+    "nome": "San Gavino Monreale",
     "provincia": "",
     "lat": 39.5512644,
     "lng": 8.7810304
@@ -539,8 +539,8 @@
     "lng": 9.0257178
   },
   {
-    "id": "futei_furtei",
-    "nome": "Futei/Furtei",
+    "id": "furtei",
+    "nome": "Furtei",
     "provincia": "",
     "lat": 39.5609562,
     "lng": 8.9545911
@@ -553,57 +553,57 @@
     "lng": 9.2921434
   },
   {
-    "id": "ballau_ballao",
-    "nome": "Ballau/Ballao",
+    "id": "ballao",
+    "nome": "Ballao",
     "provincia": "",
     "lat": 39.5759513,
     "lng": 9.3778891
   },
   {
-    "id": "arm_ngia_armungia",
-    "nome": "Armùngia/Armungia",
+    "id": "armungia",
+    "nome": "Armungia",
     "provincia": "",
     "lat": 39.5409449,
     "lng": 9.4137321
   },
   {
-    "id": "seurgus_donigala_siurgus_donigala",
-    "nome": "Seurgus Donigala/Siurgus Donigala",
+    "id": "siurgus_donigala",
+    "nome": "Siurgus Donigala",
     "provincia": "",
     "lat": 39.5908729,
     "lng": 9.2195925
   },
   {
-    "id": "s_ligas_selegas",
-    "nome": "Sèligas/Selegas",
+    "id": "selegas",
+    "nome": "Selegas",
     "provincia": "",
     "lat": 39.5743417,
     "lng": 9.10025
   },
   {
-    "id": "rthana_arzana",
-    "nome": "Àrthana/Arzana",
+    "id": "arzana",
+    "nome": "Arzana",
     "provincia": "",
     "lat": 39.7723195,
     "lng": 9.4680857
   },
   {
-    "id": "gomajori_guamaggiore",
-    "nome": "Gomajori/Guamaggiore",
+    "id": "guamaggiore",
+    "nome": "Guamaggiore",
     "provincia": "",
     "lat": 39.5871582,
     "lng": 9.0633899
   },
   {
-    "id": "g_spini_guspini",
-    "nome": "Gùspini/Guspini",
+    "id": "guspini",
+    "nome": "Guspini",
     "provincia": "",
     "lat": 39.6016885,
     "lng": 8.6042829
   },
   {
-    "id": "pabillois_pabillonis",
-    "nome": "Pabillois/Pabillonis",
+    "id": "pabillonis",
+    "nome": "Pabillonis",
     "provincia": "",
     "lat": 39.6037374,
     "lng": 8.7107453
@@ -616,8 +616,8 @@
     "lng": 9.2817087
   },
   {
-    "id": "sueddi_suelli",
-    "nome": "Sueddi/Suelli",
+    "id": "suelli",
+    "nome": "Suelli",
     "provincia": "",
     "lat": 39.5751868,
     "lng": 9.1399308
@@ -630,64 +630,64 @@
     "lng": 8.9853932
   },
   {
-    "id": "s_rdara_sardara",
-    "nome": "Sàrdara/Sardara",
+    "id": "sardara",
+    "nome": "Sardara",
     "provincia": "",
     "lat": 39.6096023,
     "lng": 8.8112181
   },
   {
-    "id": "mara_arbarei_villamar",
-    "nome": "Mara Arbarei/Villamar",
+    "id": "villamar",
+    "nome": "Villamar",
     "provincia": "",
     "lat": 39.6205848,
     "lng": 8.9730847
   },
   {
-    "id": "jersu_jerzu",
-    "nome": "Jersu/Jerzu",
+    "id": "jerzu",
+    "nome": "Jerzu",
     "provincia": "",
     "lat": 39.6929592,
     "lng": 9.5364701
   },
   {
-    "id": "scalepranu_escalaplano",
-    "nome": "Scalepranu/Escalaplano",
+    "id": "escalaplano",
+    "nome": "Escalaplano",
     "provincia": "",
     "lat": 39.6365313,
     "lng": 9.3559706
   },
   {
-    "id": "lanus_lanusei",
-    "nome": "Lanusè/Lanusei",
+    "id": "lanusei",
+    "nome": "Lanusei",
     "provincia": "",
     "lat": 39.7486472,
     "lng": 9.5727466
   },
   {
-    "id": "arrolli_orroli",
-    "nome": "Arrolli/Orroli",
+    "id": "orroli",
+    "nome": "Orroli",
     "provincia": "",
     "lat": 39.6543527,
     "lng": 9.2542199
   },
   {
-    "id": "sini_osini",
-    "nome": "Òsini/Osini",
+    "id": "osini",
+    "nome": "Osini",
     "provincia": "",
     "lat": 39.7291047,
     "lng": 9.5248523
   },
   {
-    "id": "g_sigu_gesico",
-    "nome": "Gèsigu/Gesico",
+    "id": "gesico",
+    "nome": "Gesico",
     "provincia": "",
     "lat": 39.6200144,
     "lng": 9.086616
   },
   {
-    "id": "biddanoa_de_forru_villanovaforru",
-    "nome": "Biddanoa de Forru/Villanovaforru",
+    "id": "villanovaforru",
+    "nome": "Villanovaforru",
     "provincia": "",
     "lat": 39.6251276,
     "lng": 8.8762131
@@ -700,8 +700,8 @@
     "lng": 8.8990371
   },
   {
-    "id": "ulassa_ulassai",
-    "nome": "Ulassa/Ulassai",
+    "id": "ulassai",
+    "nome": "Ulassai",
     "provincia": "",
     "lat": 39.7119464,
     "lng": 9.4736621
@@ -721,8 +721,8 @@
     "lng": 9.6088069
   },
   {
-    "id": "biddanoa_franca_villanovafranca",
-    "nome": "Biddanoa Franca/Villanovafranca",
+    "id": "villanovafranca",
+    "nome": "Villanovafranca",
     "provincia": "",
     "lat": 39.6441616,
     "lng": 9.0074575
@@ -735,15 +735,15 @@
     "lng": 9.5994273
   },
   {
-    "id": "iscroca_escolca",
-    "nome": "Iscroca/Escolca",
+    "id": "escolca",
+    "nome": "Escolca",
     "provincia": "",
     "lat": 39.675098,
     "lng": 9.0994577
   },
   {
-    "id": "foghesu_perdasdefogu",
-    "nome": "Foghesu/Perdasdefogu",
+    "id": "perdasdefogu",
+    "nome": "Perdasdefogu",
     "provincia": "",
     "lat": 39.6650196,
     "lng": 9.4538036
@@ -756,22 +756,22 @@
     "lng": 9.2327958
   },
   {
-    "id": "arcidanu_san_nicol_d_arcidano",
-    "nome": "Arcidanu/San Nicolò d'Arcidano",
+    "id": "san_nicol_d_arcidano",
+    "nome": "San Nicolò d'Arcidano",
     "provincia": "",
     "lat": 39.664182,
     "lng": 8.6522989
   },
   {
-    "id": "m_guru_mogoro",
-    "nome": "Mòguru/Mogoro",
+    "id": "mogoro",
+    "nome": "Mogoro",
     "provincia": "",
     "lat": 39.6616054,
     "lng": 8.7451943
   },
   {
-    "id": "forru_collinas",
-    "nome": "Forru/Collinas",
+    "id": "collinas",
+    "nome": "Collinas",
     "provincia": "",
     "lat": 39.6447338,
     "lng": 8.825171
@@ -784,15 +784,15 @@
     "lng": 8.9315376
   },
   {
-    "id": "is_pratzas_las_plassas",
-    "nome": "Is Pratzas/Las Plassas",
+    "id": "las_plassas",
+    "nome": "Las Plassas",
     "provincia": "",
     "lat": 39.675104,
     "lng": 8.9850459
   },
   {
-    "id": "grexei_gergei",
-    "nome": "Grexei/Gergei",
+    "id": "gergei",
+    "nome": "Gergei",
     "provincia": "",
     "lat": 39.7020504,
     "lng": 9.083583
@@ -805,8 +805,8 @@
     "lng": 8.8799353
   },
   {
-    "id": "bar_mini_barumini",
-    "nome": "Barùmini/Barumini",
+    "id": "barumini",
+    "nome": "Barumini",
     "provincia": "",
     "lat": 39.6930311,
     "lng": 9.0171385
@@ -847,22 +847,22 @@
     "lng": 8.9647661
   },
   {
-    "id": "gonnacodina_gonnoscodina",
-    "nome": "Gonnacodina/Gonnoscodina",
+    "id": "gonnoscodina",
+    "nome": "Gonnoscodina",
     "provincia": "",
     "lat": 39.6982816,
     "lng": 8.8398704
   },
   {
-    "id": "istersili_esterzili",
-    "nome": "Istersili/Esterzili",
+    "id": "esterzili",
+    "nome": "Esterzili",
     "provincia": "",
     "lat": 39.7410159,
     "lng": 9.3195918
   },
   {
-    "id": "aressa_baressa",
-    "nome": "Aressa/Baressa",
+    "id": "baressa",
+    "nome": "Baressa",
     "provincia": "",
     "lat": 39.7121116,
     "lng": 8.8715228
@@ -882,22 +882,22 @@
     "lng": 9.3453589
   },
   {
-    "id": "terraba_terralba",
-    "nome": "Terraba/Terralba",
+    "id": "terralba",
+    "nome": "Terralba",
     "provincia": "",
     "lat": 39.7256962,
     "lng": 8.5855901
   },
   {
-    "id": "masuddas_masullas",
-    "nome": "Masuddas/Masullas",
+    "id": "masullas",
+    "nome": "Masullas",
     "provincia": "",
     "lat": 39.7095345,
     "lng": 8.7694475
   },
   {
-    "id": "simaba_simala",
-    "nome": "Simaba/Simala",
+    "id": "simala",
+    "nome": "Simala",
     "provincia": "",
     "lat": 39.726321,
     "lng": 8.8353864
@@ -917,29 +917,29 @@
     "lng": 8.938366
   },
   {
-    "id": "bobadri_baradili",
-    "nome": "Bobadri/Baradili",
+    "id": "baradili",
+    "nome": "Baradili",
     "provincia": "",
     "lat": 39.72533,
     "lng": 8.894031
   },
   {
-    "id": "giauni_genuri",
-    "nome": "Giauni/Genuri",
+    "id": "genuri",
+    "nome": "Genuri",
     "provincia": "",
     "lat": 39.7409237,
     "lng": 8.9218316
   },
   {
-    "id": "g_sturi_gesturi",
-    "nome": "Gèsturi/Gesturi",
+    "id": "gesturi",
+    "nome": "Gesturi",
     "provincia": "",
     "lat": 39.7399353,
     "lng": 9.0047592
   },
   {
-    "id": "g_iru_gairo",
-    "nome": "Gàiru/Gairo",
+    "id": "gairo",
+    "nome": "Gairo",
     "provincia": "",
     "lat": 39.8256826,
     "lng": 9.5285497
@@ -952,22 +952,22 @@
     "lng": 8.7666809
   },
   {
-    "id": "margaxori_morgongiori",
-    "nome": "Margaxori/Morgongiori",
+    "id": "morgongiori",
+    "nome": "Morgongiori",
     "provincia": "",
     "lat": 39.7628967,
     "lng": 8.7467672
   },
   {
-    "id": "gonnonn_gonnosn",
-    "nome": "Gonnonnò/Gonnosnò",
+    "id": "gonnosn",
+    "nome": "Gonnosnò",
     "provincia": "",
     "lat": 39.7609588,
     "lng": 8.868772
   },
   {
-    "id": "sili_isili",
-    "nome": "Ìsili/Isili",
+    "id": "isili",
+    "nome": "Isili",
     "provincia": "",
     "lat": 39.7819264,
     "lng": 9.1260363
@@ -987,29 +987,29 @@
     "lng": 8.9045971
   },
   {
-    "id": "crucuris_curcuris",
-    "nome": "Crucuris/Curcuris",
+    "id": "curcuris",
+    "nome": "Curcuris",
     "provincia": "",
     "lat": 39.7493052,
     "lng": 8.8275738
   },
   {
-    "id": "marr_biu_marrubiu",
-    "nome": "Marrùbiu/Marrubiu",
+    "id": "marrubiu",
+    "nome": "Marrubiu",
     "provincia": "",
     "lat": 39.775689,
     "lng": 8.6720773
   },
   {
-    "id": "s_dili_sadali",
-    "nome": "Sàdili/Sadali",
+    "id": "sadali",
+    "nome": "Sadali",
     "provincia": "",
     "lat": 39.7946435,
     "lng": 9.25116
   },
   {
-    "id": "geroni_genoni",
-    "nome": "Geroni/Genoni",
+    "id": "genoni",
+    "nome": "Genoni",
     "provincia": "",
     "lat": 39.7915822,
     "lng": 8.9616041
@@ -1022,15 +1022,15 @@
     "lng": 9.0437099
   },
   {
-    "id": "abas_ales",
-    "nome": "Abas/Ales",
+    "id": "ales",
+    "nome": "Ales",
     "provincia": "",
     "lat": 39.7771507,
     "lng": 8.7975286
   },
   {
-    "id": "biddanoa_e_tulu_villanova_tulo",
-    "nome": "Biddanoa 'e Tulu/Villanova Tulo",
+    "id": "villanova_tulo",
+    "nome": "Villanova Tulo",
     "provincia": "",
     "lat": 39.7911978,
     "lng": 9.1960736
@@ -1043,29 +1043,29 @@
     "lng": 8.5750642
   },
   {
-    "id": "ollasta_useddus_albagiara",
-    "nome": "Ollasta Useddus/Albagiara",
+    "id": "albagiara",
+    "nome": "Albagiara",
     "provincia": "",
     "lat": 39.8084891,
     "lng": 8.8702907
   },
   {
-    "id": "useddus_usellus",
-    "nome": "Useddus/Usellus",
+    "id": "usellus",
+    "nome": "Usellus",
     "provincia": "",
     "lat": 39.8188044,
     "lng": 8.8302375
   },
   {
-    "id": "b_ini_villa_verde",
-    "nome": "Bàini/Villa Verde",
+    "id": "villa_verde",
+    "nome": "Villa Verde",
     "provincia": "",
     "lat": 39.8081466,
     "lng": 8.7978292
   },
   {
-    "id": "assolu_assolo",
-    "nome": "Assolu/Assolo",
+    "id": "assolo",
+    "nome": "Assolo",
     "provincia": "",
     "lat": 39.8126702,
     "lng": 8.9132028
@@ -1078,29 +1078,29 @@
     "lng": 8.9629654
   },
   {
-    "id": "nuradda_nurallao",
-    "nome": "Nuradda/Nurallao",
+    "id": "nurallao",
+    "nome": "Nurallao",
     "provincia": "",
     "lat": 39.8073249,
     "lng": 9.093768
   },
   {
-    "id": "l_coni_laconi",
-    "nome": "Làconi/Laconi",
+    "id": "laconi",
+    "nome": "Laconi",
     "provincia": "",
     "lat": 39.8594977,
     "lng": 9.0634061
   },
   {
-    "id": "bar_bari_sardo",
-    "nome": "Barì/Bari Sardo",
+    "id": "bari_sardo",
+    "nome": "Bari Sardo",
     "provincia": "",
     "lat": 39.8348895,
     "lng": 9.6579969
   },
   {
-    "id": "santa_justa_santa_giusta",
-    "nome": "Santa Justa/Santa Giusta",
+    "id": "santa_giusta",
+    "nome": "Santa Giusta",
     "provincia": "",
     "lat": 39.8458733,
     "lng": 8.6416852
@@ -1113,22 +1113,22 @@
     "lng": 8.7797669
   },
   {
-    "id": "ussassa_ussassai",
-    "nome": "Ussassa/Ussassai",
+    "id": "ussassai",
+    "nome": "Ussassai",
     "provincia": "",
     "lat": 39.8193143,
     "lng": 9.4023141
   },
   {
-    "id": "prammas_palmas_arborea",
-    "nome": "Prammas/Palmas Arborea",
+    "id": "palmas_arborea",
+    "nome": "Palmas Arborea",
     "provincia": "",
     "lat": 39.8472255,
     "lng": 8.6901617
   },
   {
-    "id": "seulu_seulo",
-    "nome": "Seulu/Seulo",
+    "id": "seulo",
+    "nome": "Seulo",
     "provincia": "",
     "lat": 39.8708278,
     "lng": 9.2339772
@@ -1148,22 +1148,22 @@
     "lng": 9.1703968
   },
   {
-    "id": "biddobrana_villaurbana",
-    "nome": "Biddobrana/Villaurbana",
+    "id": "villaurbana",
+    "nome": "Villaurbana",
     "provincia": "",
     "lat": 39.872125,
     "lng": 8.7813331
   },
   {
-    "id": "santu_antoni_arruinas_villa_sant_antonio",
-    "nome": "Santu Antoni Arruinas/Villa Sant'Antonio",
+    "id": "villa_sant_antonio",
+    "nome": "Villa Sant'Antonio",
     "provincia": "",
     "lat": 39.858216,
     "lng": 8.8997306
   },
   {
-    "id": "mogoredda_mogorella",
-    "nome": "Mogoredda/Mogorella",
+    "id": "mogorella",
+    "nome": "Mogorella",
     "provincia": "",
     "lat": 39.8710568,
     "lng": 8.8588677
@@ -1176,8 +1176,8 @@
     "lng": 8.9487424
   },
   {
-    "id": "irbono_ilbono",
-    "nome": "Irbono/Ilbono",
+    "id": "ilbono",
+    "nome": "Ilbono",
     "provincia": "",
     "lat": 39.8840818,
     "lng": 9.581708
@@ -1190,29 +1190,29 @@
     "lng": 9.6667663
   },
   {
-    "id": "aristanis_oristano",
-    "nome": "Aristanis/Oristano",
+    "id": "oristano",
+    "nome": "Oristano",
     "provincia": "",
     "lat": 39.9150344,
     "lng": 8.6085538
   },
   {
-    "id": "crabas_cabras",
-    "nome": "Crabas/Cabras",
+    "id": "cabras",
+    "nome": "Cabras",
     "provincia": "",
     "lat": 39.9278318,
     "lng": 8.4236581
   },
   {
-    "id": "arruinas_ruinas",
-    "nome": "Arruinas/Ruinas",
+    "id": "ruinas",
+    "nome": "Ruinas",
     "provincia": "",
     "lat": 39.9073662,
     "lng": 8.8858296
   },
   {
-    "id": "aritzu_aritzo",
-    "nome": "Aritzu/Aritzo",
+    "id": "aritzo",
+    "nome": "Aritzo",
     "provincia": "",
     "lat": 39.9361457,
     "lng": 9.2023942
@@ -1239,57 +1239,57 @@
     "lng": 8.9480904
   },
   {
-    "id": "meana_meana_sardo",
-    "nome": "Meana/Meana Sardo",
+    "id": "meana_sardo",
+    "nome": "Meana Sardo",
     "provincia": "",
     "lat": 39.9179589,
     "lng": 9.0549624
   },
   {
-    "id": "simaghis_simaxis",
-    "nome": "Simaghis/Simaxis",
+    "id": "simaxis",
+    "nome": "Simaxis",
     "provincia": "",
     "lat": 39.9217234,
     "lng": 8.6930836
   },
   {
-    "id": "sabarussa_solarussa",
-    "nome": "Sabarussa/Solarussa",
+    "id": "solarussa",
+    "nome": "Solarussa",
     "provincia": "",
     "lat": 39.9746772,
     "lng": 8.6878717
   },
   {
-    "id": "siapicia_siapiccia",
-    "nome": "Siapicia/Siapiccia",
+    "id": "siapiccia",
+    "nome": "Siapiccia",
     "provincia": "",
     "lat": 39.9372965,
     "lng": 8.7793176
   },
   {
-    "id": "llai_allai",
-    "nome": "Àllai/Allai",
+    "id": "allai",
+    "nome": "Allai",
     "provincia": "",
     "lat": 39.9483093,
     "lng": 8.8557654
   },
   {
-    "id": "biddamanna_istris_ili_villagrande_strisaili",
-    "nome": "Biddamanna Istrisàili/Villagrande Strisaili",
+    "id": "villagrande_strisaili",
+    "nome": "Villagrande Strisaili",
     "provincia": "",
     "lat": 40.0107072,
     "lng": 9.4601238
   },
   {
-    "id": "zrofolliu_zerfaliu",
-    "nome": "Zrofolliu/Zerfaliu",
+    "id": "zerfaliu",
+    "nome": "Zerfaliu",
     "provincia": "",
     "lat": 39.9820696,
     "lng": 8.7211546
   },
   {
-    "id": "ollasta_ollastra",
-    "nome": "Ollasta/Ollastra",
+    "id": "ollastra",
+    "nome": "Ollastra",
     "provincia": "",
     "lat": 39.9623938,
     "lng": 8.7549443
@@ -1302,8 +1302,8 @@
     "lng": 8.8124366
   },
   {
-    "id": "gelisuli_girasole",
-    "nome": "Gelisuli/Girasole",
+    "id": "girasole",
+    "nome": "Girasole",
     "provincia": "",
     "lat": 39.9543349,
     "lng": 9.6465273
@@ -1323,22 +1323,22 @@
     "lng": 8.5425701
   },
   {
-    "id": "breb_belv",
-    "nome": "Brebì/Belvì",
+    "id": "belv",
+    "nome": "Belvì",
     "provincia": "",
     "lat": 39.9722918,
     "lng": 9.1527011
   },
   {
-    "id": "siamajori_siamaggiore",
-    "nome": "Siamajori/Siamaggiore",
+    "id": "siamaggiore",
+    "nome": "Siamaggiore",
     "provincia": "",
     "lat": 39.9526676,
     "lng": 8.633
   },
   {
-    "id": "bo_tiri_baratili_san_pietro",
-    "nome": "Boàtiri/Baratili San Pietro",
+    "id": "baratili_san_pietro",
+    "nome": "Baratili San Pietro",
     "provincia": "",
     "lat": 39.9800172,
     "lng": 8.568421
@@ -1358,15 +1358,15 @@
     "lng": 8.6016729
   },
   {
-    "id": "arriora_riola_sardo",
-    "nome": "Arriora/Riola Sardo",
+    "id": "riola_sardo",
+    "nome": "Riola Sardo",
     "provincia": "",
     "lat": 39.9914128,
     "lng": 8.4887656
   },
   {
-    "id": "s_rgono_sorgono",
-    "nome": "Sòrgono/Sorgono",
+    "id": "sorgono",
+    "nome": "Sorgono",
     "provincia": "",
     "lat": 40.0128775,
     "lng": 9.0704969
@@ -1379,15 +1379,15 @@
     "lng": 8.6480033
   },
   {
-    "id": "busache_busachi",
-    "nome": "Busache/Busachi",
+    "id": "busachi",
+    "nome": "Busachi",
     "provincia": "",
     "lat": 40.0066473,
     "lng": 8.8869829
   },
   {
-    "id": "d_sulu_desulo",
-    "nome": "Dèsulu/Desulo",
+    "id": "desulo",
+    "nome": "Desulo",
     "provincia": "",
     "lat": 40.0109863,
     "lng": 9.2547816
@@ -1407,8 +1407,8 @@
     "lng": 9.5161849
   },
   {
-    "id": "biddanoa_truschedu_villanova_truschedu",
-    "nome": "Biddanoa Truschedu/Villanova Truschedu",
+    "id": "villanova_truschedu",
+    "nome": "Villanova Truschedu",
     "provincia": "",
     "lat": 39.9927313,
     "lng": 8.7643672
@@ -1435,36 +1435,36 @@
     "lng": 8.9883396
   },
   {
-    "id": "santeru_san_vero_milis",
-    "nome": "Santeru/San Vero Milis",
+    "id": "san_vero_milis",
+    "nome": "San Vero Milis",
     "provincia": "",
     "lat": 40.0247308,
     "lng": 8.5044989
   },
   {
-    "id": "paulle_paulilatino",
-    "nome": "Paulle/Paulilatino",
+    "id": "paulilatino",
+    "nome": "Paulilatino",
     "provincia": "",
     "lat": 40.0719077,
     "lng": 8.7494809
   },
   {
-    "id": "baulau_bauladu",
-    "nome": "Baulau/Bauladu",
+    "id": "bauladu",
+    "nome": "Bauladu",
     "provincia": "",
     "lat": 40.0261783,
     "lng": 8.6803602
   },
   {
-    "id": "ula_ul_tirso",
-    "nome": "Ula/Ulà Tirso",
+    "id": "ul_tirso",
+    "nome": "Ulà Tirso",
     "provincia": "",
     "lat": 40.0397866,
     "lng": 8.8989694
   },
   {
-    "id": "narabuia_narbolia",
-    "nome": "Narabuia/Narbolia",
+    "id": "narbolia",
+    "nome": "Narbolia",
     "provincia": "",
     "lat": 40.04894,
     "lng": 8.5362637
@@ -1477,22 +1477,22 @@
     "lng": 8.6416344
   },
   {
-    "id": "ilartzi_ghilarza",
-    "nome": "Ilartzi/Ghilarza",
+    "id": "ghilarza",
+    "nome": "Ghilarza",
     "provincia": "",
     "lat": 40.0922536,
     "lng": 8.8495324
   },
   {
-    "id": "s_neghe_seneghe",
-    "nome": "Sèneghe/Seneghe",
+    "id": "seneghe",
+    "nome": "Seneghe",
     "provincia": "",
     "lat": 40.0824477,
     "lng": 8.5862432
   },
   {
-    "id": "t_ana_tiana",
-    "nome": "Tìana/Tiana",
+    "id": "tiana",
+    "nome": "Tiana",
     "provincia": "",
     "lat": 40.0715102,
     "lng": 9.1690886
@@ -1505,36 +1505,36 @@
     "lng": 9.0661491
   },
   {
-    "id": "neunele_neoneli",
-    "nome": "Neunele/Neoneli",
+    "id": "neoneli",
+    "nome": "Neoneli",
     "provincia": "",
     "lat": 40.0632168,
     "lng": 8.9774494
   },
   {
-    "id": "bon_rcadu_bonarcado",
-    "nome": "Bonàrcadu/Bonarcado",
+    "id": "bonarcado",
+    "nome": "Bonarcado",
     "provincia": "",
     "lat": 40.094937,
     "lng": 8.6613128
   },
   {
-    "id": "ardaule_ardauli",
-    "nome": "Ardaule/Ardauli",
+    "id": "ardauli",
+    "nome": "Ardauli",
     "provincia": "",
     "lat": 40.0815279,
     "lng": 8.9182495
   },
   {
-    "id": "c_llieri_cuglieri",
-    "nome": "Cùllieri/Cuglieri",
+    "id": "cuglieri",
+    "nome": "Cuglieri",
     "provincia": "",
     "lat": 40.138308,
     "lng": 8.5369651
   },
   {
-    "id": "onne_fonni",
-    "nome": "'Onne/Fonni",
+    "id": "fonni",
+    "nome": "Fonni",
     "provincia": "",
     "lat": 40.1000514,
     "lng": 9.2870435
@@ -1547,15 +1547,15 @@
     "lng": 9.1827019
   },
   {
-    "id": "tadasune_tadasuni",
-    "nome": "Tadasune/Tadasuni",
+    "id": "tadasuni",
+    "nome": "Tadasuni",
     "provincia": "",
     "lat": 40.0991604,
     "lng": 8.8882401
   },
   {
-    "id": "org_solo_orgosolo",
-    "nome": "Orgòsolo/Orgosolo",
+    "id": "orgosolo",
+    "nome": "Orgosolo",
     "provincia": "",
     "lat": 40.1763663,
     "lng": 9.4016669
@@ -1568,8 +1568,8 @@
     "lng": 9.0926339
   },
   {
-    "id": "nughedu_santa_it_ria_nughedu_santa_vittoria",
-    "nome": "Nughedu Santa Itòria/Nughedu Santa Vittoria",
+    "id": "nughedu_santa_vittoria",
+    "nome": "Nughedu Santa Vittoria",
     "provincia": "",
     "lat": 40.1134787,
     "lng": 8.9803849
@@ -1582,15 +1582,15 @@
     "lng": 8.9552675
   },
   {
-    "id": "orthull_urzulei",
-    "nome": "Orthullè/Urzulei",
+    "id": "urzulei",
+    "nome": "Urzulei",
     "provincia": "",
     "lat": 40.1324662,
     "lng": 9.5067893
   },
   {
-    "id": "bidoniu_bidon",
-    "nome": "Bidoniu/Bidonì",
+    "id": "bidon",
+    "nome": "Bidonì",
     "provincia": "",
     "lat": 40.1294422,
     "lng": 8.9351245
@@ -1603,15 +1603,15 @@
     "lng": 8.8693994
   },
   {
-    "id": "soddie_sodd",
-    "nome": "Soddie/Soddì",
+    "id": "sodd",
+    "nome": "Soddì",
     "provincia": "",
     "lat": 40.1353134,
     "lng": 8.8760699
   },
   {
-    "id": "santu_lussurzu_santu_lussurgiu",
-    "nome": "Santu Lussurzu/Santu Lussurgiu",
+    "id": "santu_lussurgiu",
+    "nome": "Santu Lussurgiu",
     "provincia": "",
     "lat": 40.1592711,
     "lng": 8.6473112
@@ -1624,8 +1624,8 @@
     "lng": 8.7734406
   },
   {
-    "id": "ollollai_ollolai",
-    "nome": "Ollollai/Ollolai",
+    "id": "ollolai",
+    "nome": "Ollolai",
     "provincia": "",
     "lat": 40.1675078,
     "lng": 9.183611
@@ -1638,29 +1638,29 @@
     "lng": 9.2176272
   },
   {
-    "id": "ortzai_olzai",
-    "nome": "Ortzai/Olzai",
+    "id": "olzai",
+    "nome": "Olzai",
     "provincia": "",
     "lat": 40.1669725,
     "lng": 9.0830026
   },
   {
-    "id": "s_dilo_sedilo",
-    "nome": "Sèdilo/Sedilo",
+    "id": "sedilo",
+    "nome": "Sedilo",
     "provincia": "",
     "lat": 40.1762086,
     "lng": 8.9448521
   },
   {
-    "id": "norghiddo_norbello",
-    "nome": "Norghiddo/Norbello",
+    "id": "norbello",
+    "nome": "Norbello",
     "provincia": "",
     "lat": 40.1627477,
     "lng": 8.7987723
   },
   {
-    "id": "aidumajore_aidomaggiore",
-    "nome": "Aidumajore/Aidomaggiore",
+    "id": "aidomaggiore",
+    "nome": "Aidomaggiore",
     "provincia": "",
     "lat": 40.1767042,
     "lng": 8.8408721
@@ -1673,22 +1673,22 @@
     "lng": 9.2343903
   },
   {
-    "id": "mamujada_mamoiada",
-    "nome": "Mamujada/Mamoiada",
+    "id": "mamoiada",
+    "nome": "Mamoiada",
     "provincia": "",
     "lat": 40.210347,
     "lng": 9.2722787
   },
   {
-    "id": "otzana_ottana",
-    "nome": "Otzana/Ottana",
+    "id": "ottana",
+    "nome": "Ottana",
     "provincia": "",
     "lat": 40.2246064,
     "lng": 9.038071
   },
   {
-    "id": "b_rore_borore",
-    "nome": "Bòrore/Borore",
+    "id": "borore",
+    "nome": "Borore",
     "provincia": "",
     "lat": 40.20949,
     "lng": 8.7649889
@@ -1701,8 +1701,8 @@
     "lng": 8.4988626
   },
   {
-    "id": "iscanu_scano_di_montiferro",
-    "nome": "Iscanu/Scano di Montiferro",
+    "id": "scano_di_montiferro",
+    "nome": "Scano di Montiferro",
     "provincia": "",
     "lat": 40.219335,
     "lng": 8.6154213
@@ -1715,22 +1715,22 @@
     "lng": 9.1424057
   },
   {
-    "id": "duarche_dualchi",
-    "nome": "Duarche/Dualchi",
+    "id": "dualchi",
+    "nome": "Dualchi",
     "provincia": "",
     "lat": 40.2343583,
     "lng": 8.8906658
   },
   {
-    "id": "durgali_dorgali",
-    "nome": "Durgali/Dorgali",
+    "id": "dorgali",
+    "nome": "Dorgali",
     "provincia": "",
     "lat": 40.2947892,
     "lng": 9.5448251
   },
   {
-    "id": "sinnariolo_sennariolo",
-    "nome": "Sinnariolo/Sennariolo",
+    "id": "sennariolo",
+    "nome": "Sennariolo",
     "provincia": "",
     "lat": 40.2153045,
     "lng": 8.532634
@@ -1743,85 +1743,85 @@
     "lng": 8.957448
   },
   {
-    "id": "macumere_macomer",
-    "nome": "Macumere/Macomer",
+    "id": "macomer",
+    "nome": "Macomer",
     "provincia": "",
     "lat": 40.3082357,
     "lng": 8.7657069
   },
   {
-    "id": "fl_ssio_flussio",
-    "nome": "Flùssio/Flussio",
+    "id": "flussio",
+    "nome": "Flussio",
     "provincia": "",
     "lat": 40.2527792,
     "lng": 8.5498109
   },
   {
-    "id": "b_roro_birori",
-    "nome": "Bìroro/Birori",
+    "id": "birori",
+    "nome": "Birori",
     "provincia": "",
     "lat": 40.2580231,
     "lng": 8.8267312
   },
   {
-    "id": "orane_orani",
-    "nome": "Orane/Orani",
+    "id": "orani",
+    "nome": "Orani",
     "provincia": "",
     "lat": 40.292425,
     "lng": 9.1526375
   },
   {
-    "id": "bol_tana_bolotana",
-    "nome": "Bolòtana/Bolotana",
+    "id": "bolotana",
+    "nome": "Bolotana",
     "provincia": "",
     "lat": 40.3211767,
     "lng": 8.9361702
   },
   {
-    "id": "silanos_silanus",
-    "nome": "Silanos/Silanus",
+    "id": "silanus",
+    "nome": "Silanus",
     "provincia": "",
     "lat": 40.2944978,
     "lng": 8.9015453
   },
   {
-    "id": "magumadas_magomadas",
-    "nome": "Magumadas/Magomadas",
+    "id": "magomadas",
+    "nome": "Magomadas",
     "provincia": "",
     "lat": 40.2566942,
     "lng": 8.5161337
   },
   {
-    "id": "n_goro_nuoro",
-    "nome": "Nùgoro/Nuoro",
+    "id": "nuoro",
+    "nome": "Nuoro",
     "provincia": "",
     "lat": 40.3324429,
     "lng": 9.3045514
   },
   {
-    "id": "s_gama_sagama",
-    "nome": "Sàgama/Sagama",
+    "id": "sagama",
+    "nome": "Sagama",
     "provincia": "",
     "lat": 40.2601681,
     "lng": 8.5966488
   },
   {
-    "id": "bortigale_bortigali",
-    "nome": "Bortigale/Bortigali",
+    "id": "bortigali",
+    "nome": "Bortigali",
     "provincia": "",
     "lat": 40.3016209,
     "lng": 8.8249832
   },
   {
-    "id": "sind_a_sindia",
-    "nome": "Sindìa/Sindia",
+    "id": "sindia",
+    "nome": "Sindia",
     "provincia": "",
     "lat": 40.2905167,
     "lng": 8.6715493
   },
   {
-    "id": "m_dolo_modolo",
-    "nome": "Mòdolo/Modolo",
+    "id": "modolo",
+    "nome": "Modolo",
     "provincia": "",
     "lat": 40.2812599,
     "lng": 8.5282109
@@ -1841,15 +1841,15 @@
     "lng": 8.5622774
   },
   {
-    "id": "sune_suni",
-    "nome": "Sune/Suni",
+    "id": "suni",
+    "nome": "Suni",
     "provincia": "",
     "lat": 40.314971,
     "lng": 8.5802116
   },
   {
-    "id": "ul_ana_oliena",
-    "nome": "Ulìana/Oliena",
+    "id": "oliena",
+    "nome": "Oliena",
     "provincia": "",
     "lat": 40.2930573,
     "lng": 9.4354335
@@ -1862,22 +1862,22 @@
     "lng": 8.990105
   },
   {
-    "id": "oroteddi_orotelli",
-    "nome": "Oroteddi/Orotelli",
+    "id": "orotelli",
+    "nome": "Orotelli",
     "provincia": "",
     "lat": 40.3184359,
     "lng": 9.0966171
   },
   {
-    "id": "sem_stene_semestene",
-    "nome": "Semèstene/Semestene",
+    "id": "semestene",
+    "nome": "Semestene",
     "provincia": "",
     "lat": 40.3723877,
     "lng": 8.7173369
   },
   {
-    "id": "putumajore_pozzomaggiore",
-    "nome": "Putumajore/Pozzomaggiore",
+    "id": "pozzomaggiore",
+    "nome": "Pozzomaggiore",
     "provincia": "",
     "lat": 40.3676486,
     "lng": 8.6339116
@@ -1904,8 +1904,8 @@
     "lng": 9.0129592
   },
   {
-    "id": "isporlatu_esporlatu",
-    "nome": "Isporlatu/Esporlatu",
+    "id": "esporlatu",
+    "nome": "Esporlatu",
     "provincia": "",
     "lat": 40.3845922,
     "lng": 8.9934506
@@ -1918,8 +1918,8 @@
     "lng": 9.04219
   },
   {
-    "id": "onieri_oniferi",
-    "nome": "Onieri/Oniferi",
+    "id": "oniferi",
+    "nome": "Oniferi",
     "provincia": "",
     "lat": 40.3158643,
     "lng": 9.1516222
@@ -1932,15 +1932,15 @@
     "lng": 9.1765593
   },
   {
-    "id": "p_dria_padria",
-    "nome": "Pàdria/Padria",
+    "id": "padria",
+    "nome": "Padria",
     "provincia": "",
     "lat": 40.4066297,
     "lng": 8.584846
   },
   {
-    "id": "garteddi_galtell",
-    "nome": "Garteddi/Galtellì",
+    "id": "galtell",
+    "nome": "Galtellì",
     "provincia": "",
     "lat": 40.3863742,
     "lng": 9.5795221
@@ -1953,8 +1953,8 @@
     "lng": 8.5084328
   },
   {
-    "id": "oni_i_onifai",
-    "nome": "Oniài/Onifai",
+    "id": "onifai",
+    "nome": "Onifai",
     "provincia": "",
     "lat": 40.4377592,
     "lng": 9.6967444
@@ -1974,29 +1974,29 @@
     "lng": 9.33093
   },
   {
-    "id": "l_vula_lula",
-    "nome": "Lùvula/Lula",
+    "id": "lula",
+    "nome": "Lula",
     "provincia": "",
     "lat": 40.4695567,
     "lng": 9.5072898
   },
   {
-    "id": "bonolva_bonorva",
-    "nome": "Bonolva/Bonorva",
+    "id": "bonorva",
+    "nome": "Bonorva",
     "provincia": "",
     "lat": 40.4209237,
     "lng": 8.8408971
   },
   {
-    "id": "biddanoa_monteleone_villanova_monteleone",
-    "nome": "Biddanoa Monteleone/Villanova Monteleone",
+    "id": "villanova_monteleone",
+    "nome": "Villanova Monteleone",
     "provincia": "",
     "lat": 40.4738072,
     "lng": 8.4728317
   },
   {
-    "id": "su_burgu_burgos",
-    "nome": "Su Burgu/Burgos",
+    "id": "burgos",
+    "nome": "Burgos",
     "provincia": "",
     "lat": 40.4002578,
     "lng": 8.986376
@@ -2009,15 +2009,15 @@
     "lng": 8.6653623
   },
   {
-    "id": "urtei_bultei",
-    "nome": "Urtei/Bultei",
+    "id": "bultei",
+    "nome": "Bultei",
     "provincia": "",
     "lat": 40.4745376,
     "lng": 9.0762223
   },
   {
-    "id": "l_cula_loculi",
-    "nome": "Lòcula/Loculi",
+    "id": "loculi",
+    "nome": "Loculi",
     "provincia": "",
     "lat": 40.4321721,
     "lng": 9.5758482
@@ -2030,22 +2030,22 @@
     "lng": 8.6324388
   },
   {
-    "id": "rumana_romana",
-    "nome": "Rumana/Romana",
+    "id": "romana",
+    "nome": "Romana",
     "provincia": "",
     "lat": 40.4852925,
     "lng": 8.5781512
   },
   {
-    "id": "monteleone_monteleone_rocca_doria",
-    "nome": "Monteleone/Monteleone Rocca Doria",
+    "id": "monteleone_rocca_doria",
+    "nome": "Monteleone Rocca Doria",
     "provincia": "",
     "lat": 40.4737849,
     "lng": 8.5578938
   },
   {
-    "id": "bitzi_bitti",
-    "nome": "Bitzi/Bitti",
+    "id": "bitti",
+    "nome": "Bitti",
     "provincia": "",
     "lat": 40.5509572,
     "lng": 9.4025004
@@ -2065,15 +2065,15 @@
     "lng": 9.2216356
   },
   {
-    "id": "thiniscole_siniscola",
-    "nome": "Thiniscole/Siniscola",
+    "id": "siniscola",
+    "nome": "Siniscola",
     "provincia": "",
     "lat": 40.5433522,
     "lng": 9.7045014
   },
   {
-    "id": "turalva_torralba",
-    "nome": "Turalva/Torralba",
+    "id": "torralba",
+    "nome": "Torralba",
     "provincia": "",
     "lat": 40.4964262,
     "lng": 8.8027769
@@ -2086,15 +2086,15 @@
     "lng": 8.6570048
   },
   {
-    "id": "cher_mule_cheremule",
-    "nome": "Cherèmule/Cheremule",
+    "id": "cheremule",
+    "nome": "Cheremule",
     "provincia": "",
     "lat": 40.4924471,
     "lng": 8.6867502
   },
   {
-    "id": "nughedu_santu_nigola_nughedu_san_nicol",
-    "nome": "Nughedu Santu Nigola/Nughedu San Nicolò",
+    "id": "nughedu_san_nicol",
+    "nome": "Nughedu San Nicolò",
     "provincia": "",
     "lat": 40.5292185,
     "lng": 8.9824781
@@ -2114,57 +2114,57 @@
     "lng": 8.8419594
   },
   {
-    "id": "itireddu_ittireddu",
-    "nome": "Itireddu/Ittireddu",
+    "id": "ittireddu",
+    "nome": "Ittireddu",
     "provincia": "",
     "lat": 40.5284879,
     "lng": 8.9082735
   },
   {
-    "id": "boruta_borutta",
-    "nome": "Boruta/Borutta",
+    "id": "borutta",
+    "nome": "Borutta",
     "provincia": "",
     "lat": 40.5239677,
     "lng": 8.7443895
   },
   {
-    "id": "patada_pattada",
-    "nome": "Patada/Pattada",
+    "id": "pattada",
+    "nome": "Pattada",
     "provincia": "",
     "lat": 40.5923317,
     "lng": 9.1212192
   },
   {
-    "id": "osidde_osidda",
-    "nome": "Osidde/Osidda",
+    "id": "osidda",
+    "nome": "Osidda",
     "provincia": "",
     "lat": 40.5208431,
     "lng": 9.2343138
   },
   {
-    "id": "bunn_nnaru_bonnanaro",
-    "nome": "Bunnànnaru/Bonnanaro",
+    "id": "bonnanaro",
+    "nome": "Bonnanaro",
     "provincia": "",
     "lat": 40.544359,
     "lng": 8.7804825
   },
   {
-    "id": "l_alguer_alghero",
-    "nome": "l'Alguer/Alghero",
+    "id": "alghero",
+    "nome": "Alghero",
     "provincia": "",
     "lat": 40.5844763,
     "lng": 8.2790427
   },
   {
-    "id": "potuvigari_putifigari",
-    "nome": "Potuvigari/Putifigari",
+    "id": "putifigari",
+    "nome": "Putifigari",
     "provincia": "",
     "lat": 40.5718487,
     "lng": 8.4452478
   },
   {
-    "id": "uddus_buddus",
-    "nome": "Uddusò/Buddusò",
+    "id": "buddus",
+    "nome": "Buddusò",
     "provincia": "",
     "lat": 40.6069273,
     "lng": 9.2847603
@@ -2177,15 +2177,15 @@
     "lng": 8.683856
   },
   {
-    "id": "tiri_cannedu_ittiri",
-    "nome": "Ìtiri Cannedu/Ittiri",
+    "id": "ittiri",
+    "nome": "Ittiri",
     "provincia": "",
     "lat": 40.5880063,
     "lng": 8.5605228
   },
   {
-    "id": "onan_e_onan",
-    "nome": "Onanìe/Onanì",
+    "id": "onan",
+    "nome": "Onanì",
     "provincia": "",
     "lat": 40.5273122,
     "lng": 9.4542396
@@ -2198,29 +2198,29 @@
     "lng": 9.5660981
   },
   {
-    "id": "s_ligo_siligo",
-    "nome": "Sìligo/Siligo",
+    "id": "siligo",
+    "nome": "Siligo",
     "provincia": "",
     "lat": 40.5941082,
     "lng": 8.7302241
   },
   {
-    "id": "otieri_ozieri",
-    "nome": "Otieri/Ozieri",
+    "id": "ozieri",
+    "nome": "Ozieri",
     "provincia": "",
     "lat": 40.64471,
     "lng": 8.9476216
   },
   {
-    "id": "b_nari_banari",
-    "nome": "Bànari/Banari",
+    "id": "banari",
+    "nome": "Banari",
     "provincia": "",
     "lat": 40.5811865,
     "lng": 8.671159
   },
   {
-    "id": "fiolinas_florinas",
-    "nome": "Fiolinas/Florinas",
+    "id": "florinas",
+    "nome": "Florinas",
     "provincia": "",
     "lat": 40.6291171,
     "lng": 8.6559753
@@ -2233,22 +2233,22 @@
     "lng": 9.6243195
   },
   {
-    "id": "pasada_posada",
-    "nome": "Pasada/Posada",
+    "id": "posada",
+    "nome": "Posada",
     "provincia": "",
     "lat": 40.6441303,
     "lng": 9.7187701
   },
   {
-    "id": "codronzanu_codrongianos",
-    "nome": "Codronzanu/Codrongianos",
+    "id": "codrongianos",
+    "nome": "Codrongianos",
     "provincia": "",
     "lat": 40.6592519,
     "lng": 8.6833166
   },
   {
-    "id": "ldara_ardara",
-    "nome": "Àldara/Ardara",
+    "id": "ardara",
+    "nome": "Ardara",
     "provincia": "",
     "lat": 40.6306376,
     "lng": 8.8349543
@@ -2268,22 +2268,22 @@
     "lng": 8.5980283
   },
   {
-    "id": "piaghe_ploaghe",
-    "nome": "Piaghe/Ploaghe",
+    "id": "ploaghe",
+    "nome": "Ploaghe",
     "provincia": "",
     "lat": 40.6735228,
     "lng": 8.7579617
   },
   {
-    "id": "sini_usini",
-    "nome": "Ùsini/Usini",
+    "id": "usini",
+    "nome": "Usini",
     "provincia": "",
     "lat": 40.6591891,
     "lng": 8.5296832
   },
   {
-    "id": "s_ulumedu_olmedo",
-    "nome": "S'Ulumedu/Olmedo",
+    "id": "olmedo",
+    "nome": "Olmedo",
     "provincia": "",
     "lat": 40.6516477,
     "lng": 8.383226
@@ -2296,43 +2296,43 @@
     "lng": 9.5034188
   },
   {
-    "id": "al_al_dei_sardi",
-    "nome": "Alà/Alà dei Sardi",
+    "id": "al_dei_sardi",
+    "nome": "Alà dei Sardi",
     "provincia": "",
     "lat": 40.6704616,
     "lng": 9.3453061
   },
   {
-    "id": "tzaramonte_chiaramonti",
-    "nome": "Tzaramonte/Chiaramonti",
+    "id": "chiaramonti",
+    "nome": "Chiaramonti",
     "provincia": "",
     "lat": 40.7284171,
     "lng": 8.8431107
   },
   {
-    "id": "carzeghe_cargeghe",
-    "nome": "Carzeghe/Cargeghe",
+    "id": "cargeghe",
+    "nome": "Cargeghe",
     "provincia": "",
     "lat": 40.6778081,
     "lng": 8.6427357
   },
   {
-    "id": "oscheri_oschiri",
-    "nome": "Oscheri/Oschiri",
+    "id": "oschiri",
+    "nome": "Oschiri",
     "provincia": "",
     "lat": 40.7397151,
     "lng": 9.1166152
   },
   {
-    "id": "t_ttari_sassari",
-    "nome": "Tàttari/Sassari",
+    "id": "sassari",
+    "nome": "Sassari",
     "provincia": "",
     "lat": 40.7605259,
     "lng": 8.3872217
   },
   {
-    "id": "budune_budoni",
-    "nome": "Budune/Budoni",
+    "id": "budoni",
+    "nome": "Budoni",
     "provincia": "",
     "lat": 40.7049814,
     "lng": 9.6956182
@@ -2352,15 +2352,15 @@
     "lng": 8.6199239
   },
   {
-    "id": "sile_osilo",
-    "nome": "Òsile/Osilo",
+    "id": "osilo",
+    "nome": "Osilo",
     "provincia": "",
     "lat": 40.7682143,
     "lng": 8.6799274
   },
   {
-    "id": "belchidda_berchidda",
-    "nome": "Belchidda/Berchidda",
+    "id": "berchidda",
+    "nome": "Berchidda",
     "provincia": "",
     "lat": 40.7724275,
     "lng": 9.2021104
@@ -2373,8 +2373,8 @@
     "lng": 9.5636966
   },
   {
-    "id": "monte_monti",
-    "nome": "Monte/Monti",
+    "id": "monti",
+    "nome": "Monti",
     "provincia": "",
     "lat": 40.7966799,
     "lng": 9.3562815
@@ -2394,8 +2394,8 @@
     "lng": 8.9428735
   },
   {
-    "id": "s_nnaru_sennori",
-    "nome": "Sènnaru/Sennori",
+    "id": "sennori",
+    "nome": "Sennori",
     "provincia": "",
     "lat": 40.8022105,
     "lng": 8.6226615
@@ -2408,15 +2408,15 @@
     "lng": 8.8335853
   },
   {
-    "id": "p_ifugas_perfugas",
-    "nome": "Pèifugas/Perfugas",
+    "id": "perfugas",
+    "nome": "Perfugas",
     "provincia": "",
     "lat": 40.833195,
     "lng": 8.9351504
   },
   {
-    "id": "loiri_poltu_santu_paolu_loiri_porto_san_paolo",
-    "nome": "Loiri-Poltu Santu Paolu/Loiri Porto San Paolo",
+    "id": "loiri_porto_san_paolo",
+    "nome": "Loiri Porto San Paolo",
     "provincia": "",
     "lat": 40.8351692,
     "lng": 9.5334549
@@ -2429,43 +2429,43 @@
     "lng": 8.8426466
   },
   {
-    "id": "t_mpiu_tempio_pausania",
-    "nome": "Tèmpiu/Tempio Pausania",
+    "id": "tempio_pausania",
+    "nome": "Tempio Pausania",
     "provincia": "",
     "lat": 40.9856456,
     "lng": 9.1520634
   },
   {
-    "id": "s_ssu_sorso",
-    "nome": "Sòssu/Sorso",
+    "id": "sorso",
+    "nome": "Sorso",
     "provincia": "",
     "lat": 40.8248623,
     "lng": 8.5651691
   },
   {
-    "id": "bultzi_bulzi",
-    "nome": "Bultzi/Bulzi",
+    "id": "bulzi",
+    "nome": "Bulzi",
     "provincia": "",
     "lat": 40.8524056,
     "lng": 8.8509095
   },
   {
-    "id": "zelgu_tergu",
-    "nome": "Zelgu/Tergu",
+    "id": "tergu",
+    "nome": "Tergu",
     "provincia": "",
     "lat": 40.8521997,
     "lng": 8.7121535
   },
   {
-    "id": "posthudorra_porto_torres",
-    "nome": "Posthudorra/Porto Torres",
+    "id": "porto_torres",
+    "nome": "Porto Torres",
     "provincia": "",
     "lat": 40.951076,
     "lng": 8.3338048
   },
   {
-    "id": "caragnani_calangianus",
-    "nome": "Caragnani/Calangianus",
+    "id": "calangianus",
+    "nome": "Calangianus",
     "provincia": "",
     "lat": 40.9190872,
     "lng": 9.2386219
@@ -2478,50 +2478,50 @@
     "lng": 9.3561682
   },
   {
-    "id": "isthintini_stintino",
-    "nome": "Isthintini/Stintino",
+    "id": "stintino",
+    "nome": "Stintino",
     "provincia": "",
     "lat": 40.8940839,
     "lng": 8.2251626
   },
   {
-    "id": "cuzina_santa_maria_coghinas",
-    "nome": "Cuzina/Santa Maria Coghinas",
+    "id": "santa_maria_coghinas",
+    "nome": "Santa Maria Coghinas",
     "provincia": "",
     "lat": 40.894226,
     "lng": 8.8660351
   },
   {
-    "id": "bultiggjata_bortigiadas",
-    "nome": "Bultiggjata/Bortigiadas",
+    "id": "bortigiadas",
+    "nome": "Bortigiadas",
     "provincia": "",
     "lat": 40.8765516,
     "lng": 8.9802381
   },
   {
-    "id": "castheddu_castelsardo",
-    "nome": "Castheddu/Castelsardo",
+    "id": "castelsardo",
+    "nome": "Castelsardo",
     "provincia": "",
     "lat": 40.8923439,
     "lng": 8.7156892
   },
   {
-    "id": "codaruina_valledoria",
-    "nome": "Codaruina/Valledoria",
+    "id": "valledoria",
+    "nome": "Valledoria",
     "provincia": "",
     "lat": 40.9189071,
     "lng": 8.8232261
   },
   {
-    "id": "viddha_eccia_viddalba",
-    "nome": "Viddha Eccia/Viddalba",
+    "id": "viddalba",
+    "nome": "Viddalba",
     "provincia": "",
     "lat": 40.9237318,
     "lng": 8.9299922
   },
   {
-    "id": "agghju_aggius",
-    "nome": "Agghju/Aggius",
+    "id": "aggius",
+    "nome": "Aggius",
     "provincia": "",
     "lat": 40.9876634,
     "lng": 9.0166602
@@ -2534,22 +2534,22 @@
     "lng": 8.8691848
   },
   {
-    "id": "sant_antoni_di_gaddura_sant_antonio_di_gallura",
-    "nome": "Sant'Antoni di Gaddura/Sant'Antonio di Gallura",
+    "id": "sant_antonio_di_gallura",
+    "nome": "Sant'Antonio di Gallura",
     "provincia": "",
     "lat": 40.970976,
     "lng": 9.3311839
   },
   {
-    "id": "la_trinitai_e_vignola_trinit_d_agultu_e_vignola",
-    "nome": "La Trinitai e Vignola/Trinità d'Agultu e Vignola",
+    "id": "trinit_d_agultu_e_vignola",
+    "nome": "Trinità d'Agultu e Vignola",
     "provincia": "",
     "lat": 41.0314287,
     "lng": 8.9585535
   },
   {
-    "id": "figari_golfo_aranci",
-    "nome": "Figari/Golfo Aranci",
+    "id": "golfo_aranci",
+    "nome": "Golfo Aranci",
     "provincia": "",
     "lat": 40.9881525,
     "lng": 9.5777527
@@ -2562,15 +2562,15 @@
     "lng": 9.202659
   },
   {
-    "id": "locusantu_luogosanto",
-    "nome": "Locusantu/Luogosanto",
+    "id": "luogosanto",
+    "nome": "Luogosanto",
     "provincia": "",
     "lat": 41.0679979,
     "lng": 9.2035063
   },
   {
-    "id": "alzach_na_arzachena",
-    "nome": "Alzachèna/Arzachena",
+    "id": "arzachena",
+    "nome": "Arzachena",
     "provincia": "",
     "lat": 41.0858465,
     "lng": 9.4254528
@@ -2583,29 +2583,29 @@
     "lng": 9.1154252
   },
   {
-    "id": "lu_palau_palau",
-    "nome": "Lu Palau/Palau",
+    "id": "palau",
+    "nome": "Palau",
     "provincia": "",
     "lat": 41.1672938,
     "lng": 9.3662302
   },
   {
-    "id": "lung_ni_santa_teresa_gallura",
-    "nome": "Lungòni/Santa Teresa Gallura",
+    "id": "santa_teresa_gallura",
+    "nome": "Santa Teresa Gallura",
     "provincia": "",
     "lat": 41.2039364,
     "lng": 9.226318
   },
   {
-    "id": "nujvi_nulvi",
-    "nome": "Nujvi/Nulvi",
+    "id": "nulvi",
+    "nome": "Nulvi",
     "provincia": "",
     "lat": 40.7913136,
     "lng": 8.7587569
   },
   {
-    "id": "s_ddini_sedini",
-    "nome": "Séddini/Sedini",
+    "id": "sedini",
+    "nome": "Sedini",
     "provincia": "",
     "lat": 40.8653489,
     "lng": 8.7982514
@@ -2618,8 +2618,8 @@
     "lng": 9.5148173
   },
   {
-    "id": "murera_muravera",
-    "nome": "Murera/Muravera",
+    "id": "muravera",
+    "nome": "Muravera",
     "provincia": "",
     "lat": 39.3356622,
     "lng": 9.5798429
@@ -2688,8 +2688,8 @@
       "tipo": "spiaggia"
     },
     {
-      "id": "plaja_is_compinxius_spiaggia_i_pini",
-      "nome": "Plaja Is Compinxius/Spiaggia I Pini",
+      "id": "spiaggia_i_pini",
+      "nome": "Spiaggia I Pini",
       "provincia": "",
       "lat": 39.4294601,
       "lng": 8.4124236,
